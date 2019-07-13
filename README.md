@@ -1,165 +1,8 @@
 # Vno, just another ghost theme
 
-## Deprecated
-
-Since I am not using Ghost anymore, vno for Ghost will not be continued developed. I am moving to Jekyll now and I also ported vno to a Jekyll theme and simplify the configuration as well. If you are interested in that, please visit [Vno Jekyll](https://github.com/onevcat/vno-jekyll) for more information.
-
-## 弃用
-
-因为我不再使用 Ghost 了，所以 vno for Ghost 主题也将不再继续开发。我现在转向使用 Jekyll，因此我把 vno 向 Jekyll 平台进行了移植，并简化了主题的配置和使用。如果您对此感兴趣的话，可以访问 [Vno Jekyll](https://github.com/onevcat/vno-jekyll) 来获取更多信息。
-
-(中文在后)
-
-## Overview
-
-`Vno` is a ghost theme derivated from [Dale Anthony's Uno](https://github.com/daleanthony/uno). The theme features a minimal, responsive design with a cover page, disqus comment integration, font icons and various color options.
-
-I fixed some unexpected behaviors and changed some style and detail, making it more suitable for Chinese (or Japanese and Korea) language content. Please find a live demo of the theme running as my personal blog, [OneV's Den](http://onevcat.com).
-
-## Features
-
-### Cover page
-
-There is a beautiful full screen landing page for you to display a cover image with blur effect. I suppied several color for you to choose for the cover, while of course you can add your own. You can also place your avatar, blog title, your bio and some social button here.
-
-### Responsive and Animation
-
-Vno is following the responsive design and works well in mobile devices. You may find some events is driven by great animation, thanks to the [Animate.css](http://daneden.github.io/animate.css/), which makes all these possible.
-
-### Disqus comments and Font Awesome
-
-Integrate comment system with a simple user name input with [Disqus](https://disqus.com). Use [Font Awesome](http://fontawesome.io) icon to express yourself better. They are perfect for a personal site (such as blog), as well as some commercial CMS.
-
-### SASS
-
-Vno is built on SASS, but it is not a must flow. If you know HTML and CSS, making modifications to the theme should be super simple.
-
-### Code highlight
-
-[highlight.js](http://highlightjs.org) is used as the code highlight engine of this theme. You can get a clean and good-look code block in your tech blog.
-
-## Usage
-
-### Install
-
-You should already set up a [ghost blog](https://ghost.org). If you are not prepared yet, please refer to the official [installation page](http://docs.ghost.org/installation/).
-
-When you get ready, just clone the repo to a folder under your blog's theme folder: `content/themes/`. Restart ghost and you can find the `Vno` in the blog setting panle.
-
-### Cover
-
-#### Image and Color
-
-Place your cover image under `assets/images/` folder and replace the default image file `background-cover.jpg`(You can also change it in your blog setting). You can change the cover overlap color as well. Change the `cover-orange` in the line of `<div class="panel-cover--overlay cover-blue"></div>` in `partials/side-panel.hbs` to the color you like. There are 7 options by default: 
-
-* `cover-blue` - #2568A3
-* `cover-green` - #156F78
-* `cover-purple` - #493252
-* `cover-red` - #E25440
-* `cover-orange` - #FB9C50
-* `cover-slate` - #3D4260
-* `cover-disabled` - Transparent
-
-#### Avatar and Bio
-
-The avatar will be the logo of your blog. Change it in your blog setting.
-
-You can write a short bio on the landing page. See `partials/side-panel.hbs` file and you will find how to deal with that. :)
-
-#### Navigation Buttons
-
-Also in the `partials/side-panel.hbs` file. Don't forget to change it to your own links. You may not change the `/#blog` link, which will trigger an animation to your blog main page.
-
-#### Social Buttons
-
-You should update the links and icons in `partials/social.hbs`. The icons comes from Font Awesome, see [here](http://fontawesome.io/icons/) for all icons you can use.
-
-### Disqus
-
-You need to know your `short name` of Disqus. Add it to `disqus_shortname` in `comments.hbs` and then replace the `{{!-- {{> comments}} --}}` with `{{> comments}}` in `post.hbs` to enable Disqus for your blog.
-
-### Code highlight theme
-
-Vno is using the classic [tomorrow](http://jmblog.github.io/color-themes-for-highlightjs/tomorrow/) theme as a default. You can select your favourite color scheme and put it under `assets/css` folder directly. Then change the `css/tomorrow.css` in `default.hbs` to make it live. For more color schemes, see [this site](http://jmblog.github.com/color-themes-for-highlightjs/).
-
-## Development
-
-In order to develop or make changes to the theme you will need to have the sass compiler and bourbon both installed.  If you are running a Ghost environment locally then you should already have these installed as those are required to run Ghost.
-
-To check installation run the following commands from a terminal and you should see the `> cli output` but your version numbers may vary.
-
-### SASS
-
-```bash
-sass -v
-> Sass 3.3.6 (Maptastic Maple)
-```
-
-If for some reason SASS isn't installed follow the instructions from the [Sass install page](http://sass-lang.com/install)
-
-### Bourbon
-```bash
-bourbon version
-> Bourbon 4.0.1
-```
-
-If Bourbon isn't installed follow the installation instructions on the [Bourbon website](http://bourbon.io)
-
-### Go go dev
-
-Once installation is verified we will need to go mount the bourbon mixins into the `scss` folder.
-
-From the project root run `bourbon install` with the correct path
-
-```bash
-bourbon install --path assets/scss
-> bourbon files installed to assets/scss/bourbon/
-//Or "Bourbon files already installed, doing nothing." if you already installed it.
-```
-
-Now that we have the bourbon mixins inside of the `scss` src folder. We can now use the sass cli command to watch the scss files for changes and recompile them.
-
-```bash
-pwd
-> In the vno theme root folder: {blog_path}/content/themes/vno
-sass --watch assets/scss/vno.scss:assets/css/vno.css
->>>> Sass is watching for changes. Press Ctrl-C to stop.
-```
-
-Now, you can change the scss files and all change will be complied to the final `/css/vno.css` automatically.
-
-### OSX Maverick
-
-Some people may receive this error when trying to run the `sass --watch` command
-
-```bash
-> LoadError: cannot load such file -- rb-fsevent
-  Use --trace for backtrace.
-```
-
-This is a known issue with the [Sass on OSX Maverick](http://stackoverflow.com/questions/22413834/getting-error-when-using-command-line-for-sass-to-watch-files) as indicated install the `rb-fsevent` gem.
-
-```bash
-gem install rb-fsevent
-```
-
-### Good luck
-
-Enjoy it and give me feedback. If you find any bugs (in fact I am new to web dev), do not hesitate to point them out, and a pull request would be appreciated!
-
-## Licence
-
-Great thanks to [Dale Anthony](https://github.com/daleanthony) and his [Uno](https://github.com/daleanthony/uno). Vno is based on Uno, and contains a lot of modification on page layout, animation, font and some more things I can not remember.
-
-Vno is followed with Uno and be licensed as [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/). See the link for more information.
-
----
-
 ## 总览
 
-`Vno` 是一个从 [Dale Anthony 的 Uno](https://github.com/daleanthony/uno) 派生出的 Ghost 主题。它遵从简洁和响应式的设计风格，拥有一个独立的封面，易于集成的 Disqus 评论系统，字体图标以及多种颜色。
-
-我在原来的基础上对一些预料外的行为进行了修正，并且改变了一些样式和细节，这样主题在中文 (以及日文和韩文) 上表现得更好。我的个人博客 [OneV's Den](http://onevcat.com) 正在使用这个主题，您可以看看实际的效果。
+`Vno` 是一个从 [Dale Anthony 的 Uno](https://github.com/daleanthony/uno) 派生出的 Ghost 主题。它遵从简洁和响应式的设计风格，拥有一个独立的封面，字体图标以及多种颜色。
 
 ## 特性
 
@@ -170,10 +13,6 @@ Vno is followed with Uno and be licensed as [Creative Commons Attribution 4.0 In
 ### 响应式设计和动画
 
 Vno 遵循响应式设计，所以应该能在各种设备上都表现良好。很多事件是由动画驱动的，这要感谢 [Animate.css](http://daneden.github.io/animate.css/) 的帮助。
-
-### Disqus 评论系统和 Font Awesome 字体
-
-如果您打算使用 [Disqus](https://disqus.com) 的话，集成评论系统就只是填一个用户名那么简单。您也可以使用 [Font Awesome](http://fontawesome.io) 的图标字体来获得更好的表现。这些不仅对于个人站点 (比如博客) 来说是很好的选择，对于一些商用的 CMS (内容管理系统) 来说也是不错的解决方案。
 
 ### SASS
 
@@ -218,11 +57,6 @@ Vno 是基于 SASS 创建的，但是如果您不再希望继续维护可扩展�
 #### 社交按钮
 
 可以在 `partials/social.hbs` 中按照例子将社交网络的按钮替换成您需要的链接和图标。图标都来自 Font Awesome，您可以访问它们的[网站](http://fontawesome.io/icons/)来查看您能使用的所有图标。
-
-### Disqus
-
-为了使用 Disqus 的评论系统，您需要从 Disqus 获取您自己的 `short name`。将其添加到 `comments.hbs` 的 `disqus_shortname` 中就可以了。然后您还需要将 `post.hbs` 中的 `{{!-- {{> comments}} --}}` 替换为 `{{> comments}}` 来使 Disqus 生效。
-
 
 ### 代码高亮主题
 
@@ -275,21 +109,6 @@ sass --watch assets/scss/vno.scss:assets/css/vno.css
 ```
 
 现在，任何对于 scss 文件的改动都将自动反映到最终的 `/css/vno.css` 文件中了。
-
-### OSX Maverick
-
-有些人在运行 `sass --watch` 时可能会遇到如下错误：
-
-```bash
-> LoadError: cannot load such file -- rb-fsevent
-  Use --trace for backtrace.
-```
-
-这是一个 Sass 在 OSX Maverick 下的[已知问题](http://stackoverflow.com/questions/22413834/getting-error-when-using-command-line-for-sass-to-watch-files)，新版本中应该已经修复。请尝试将 Sass 升级到最新版本，或者安装 `rb-fsevent` 这个gem：
-
-```bash
-gem install rb-fsevent
-```
 
 ### 祝你好运
 
