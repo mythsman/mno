@@ -3,7 +3,9 @@ $(document).ready(function() {
   $('a.blog-button').click(function() {
     // If already in blog, return early without animate overlay panel again.
     if (location.hash && location.hash == "#blog") return;
-    if ($('.panel-cover').hasClass('panel-cover--collapsed')) return;
+    if (!$('.panel-cover').hasClass('panel-cover--collapsed')) {
+      $('.panel-cover').addClass('panel-cover--collapsed')
+    }
     $('.main-post-list').removeClass('hidden');
     currentWidth = $('.panel-cover').width();
     if (currentWidth < 960) {
@@ -15,13 +17,14 @@ $(document).ready(function() {
     }
   });
 
-  if (window.location.hash && window.location.hash == "#blog") {
-    $('.panel-cover').addClass('panel-cover--collapsed');
+  if (window.location.pathname == "/"  && window.location.hash != "#blog") {
+    $('.panel-cover').removeClass('panel-cover--collapsed');
+    $('.main-post-list').addClass('hidden');
+  }else{
+    if(!$('.panel-cover').hasClass('panel-cover--collapsed')){
+      $('.panel-cover').addClass('panel-cover--collapsed');
+    }
     $('.main-post-list').removeClass('hidden');
-  }
-
-  if (window.location.pathname.substring(0, 5) == "/tag/") {
-    $('.panel-cover').addClass('panel-cover--collapsed');
   }
 
   $('.btn-mobile-menu__icon').click(function() {

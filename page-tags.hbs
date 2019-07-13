@@ -19,7 +19,7 @@
     box-shadow: none;
   }
 </style>
-<script src="https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud-1.0.4.min.js" ></script>
+<script src="{{asset "js/jqcloud-1.0.4.min.js"}}" ></script>
 <script>
  document.addEventListener("DOMContentLoaded", function(){
    var words = [];
@@ -35,5 +35,5 @@
     $('#keywords').jQCloud(words);
   });
 </script>
-<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud.css" />
+<link rel="stylesheet" type="text/css" href="{{asset "css/jqcloud.min.css"}}" />
 {{/post}}
