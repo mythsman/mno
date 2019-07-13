@@ -558,7 +558,7 @@ i {
   font-size: 18px; }
 
 .social {
-  font-size: 22px; }
+  font-size: 22px !important; }
 
 .icon-social {
   font-family: 'entypo-social';
