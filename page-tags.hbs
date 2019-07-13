@@ -1,0 +1,39 @@
+{{!< default}}
+{{#post}}
+
+<article>
+  <div class="tagCloud" id="keywords"></div>
+</article>
+
+<style>
+  .tagCloud{
+    width: 90%;
+    height: 600px;
+    margin: 40px auto;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    border-width: 1px;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+  }
+</style>
+<script src="https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud-1.0.4.min.js" ></script>
+<script>
+ document.addEventListener("DOMContentLoaded", function(){
+   var words = [];
+   {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+    {{#foreach tags}}
+      var thisTag = {};
+      thisTag.text = "{{name}}";
+      thisTag.weight = "{{count.posts}}"
+      thisTag.link = "/tag/{{slug}}"
+      words.push(thisTag);
+    {{/foreach}}
+   {{/get}}
+    $('#keywords').jQCloud(words);
+  });
+</script>
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud.css" />
+{{/post}}

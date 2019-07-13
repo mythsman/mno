@@ -1,0 +1,7 @@
+<nav class="cover-navigation cover-navigation--primary">
+  <ul class="navigation">
+    {{#foreach @blog.navigation}}
+      <li class="navigation__item"><a href="{{this.url}}" title="{{this.label}}" class="blog-button">{{this.label}}</a></li>
+    {{/foreach}}
+  </ul>
+</nav>

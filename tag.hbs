@@ -1,6 +1,6 @@
 {{!< default}}
 
-  <h1 class="archive-title">Tag: {{tag.name}}</h1>
+  <h1 class="archive-title">标签: {{tag.name}}</h1>
 
   <hr class="section-title__divider" />
 
@@ -13,7 +13,7 @@
         <p class="excerpt">{{excerpt characters="250"}}&hellip;</p>
         <div class="post-list__meta">
             <time datetime="{{date format="DD MMM YYYY"}}" class="post-list__meta--date date">{{date format="DD MMM YYYY"}}</time> &#8226;
-            <span class="post-list__meta--tags tags">{{#foreach tags}}<a href="{{url}}#blog" title="{{name}}">{{name}}</a>{{#if @last}}{{else}}, {{/if}}{{/foreach}}</span><a class="btn-border-small" href={{url}}>继续阅读</a>
+            <span class="post-list__meta--tags tags">{{#foreach tags}}<a href="{{url}}#blog" title="{{name}}">{{name}}</a>{{#if @last}}{{else}}, {{/if}}{{/foreach}}</span><a class="btn-border-small" href={{url}}>阅读全文</a>
         </div>
         <hr class="post-list__divider" />
       </li>

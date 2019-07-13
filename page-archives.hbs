@@ -1,0 +1,148 @@
+{{!< default}}
+{{#post}}
+  <article class="archives">
+    <section class="archives-content">
+      <span class="archives-top"></span>
+      <span class="archives-total">
+        {{#get "posts" as |posts postPages|}}
+        <strong>
+         当前有 {{ postPages.total }} 篇文章。质量重于数量，不要贪多哦~
+        </strong>
+        {{/get}}
+      </span>
+      {{#get "posts" limit="all" order="published_at desc"}}
+        {{#foreach posts}}
+          <div class="archives-item" date="{{date format="YYYY"}}" data-anijs="if: scroll, on: window, do: fadeInDown animated, before: scrollReveal">
+            <div class="archives-info">
+              <div class="archives-info-meta">
+                <a href="{{url}}">
+                  <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>
+                  <time class="archives-date" datetime="{{date published_at format="MM-DD"}}">{{date published_at format="MM-DD"}}</time>
+                {{title}}
+                </a>
+              </div>
+            </div>
+          </div>
+        {{/foreach}}
+      {{/get}}
+    </section>
+  </article>
+<style>
+.archives {
+    width: 90%;
+    margin: 40px auto;
+}
+.archives .archives-content::before,
+.archives .archives-content::after {
+    content: " ";
+    position: absolute;
+}
+.archives .archives-content::after {
+    top: 60px;
+    bottom: 52px;
+    width: 4px;
+    margin-left: 2px;
+    background: #f5f5f5;
+    z-index: 1;
+}
+.archives .archives-top {
+    position: absolute;
+    top: 50px;
+    width: 10px;
+    height: 10px;
+    margin-left: -1px;
+    background: #555;
+    opacity: 0.5;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.archives .archives-total {
+    position: relative;
+    top: 4px;
+    left: 20px;
+}
+.archives .archives-item {
+    position: relative;
+    margin: 30px 0;
+    overflow: hidden;
+    z-index: 2;
+}
+.archives .archives-year {
+    font-weight: bold;
+    margin: 10px 20px;
+}
+.archives .archives-year::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    margin-left: -1px;
+    margin-top: 8px;
+    background: #555;
+    opacity: 0.5;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.archives-info {
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: border;
+}
+.archives-info .archives-info-meta {
+    margin-left: 20px;
+    padding: 4px 0;
+    overflow: hidden;
+    border-bottom: 1px dashed #ccc;
+}
+.archives-info .archives-info-meta::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #bbb;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: background;
+}
+.archives-info .archives-info-meta:hover {
+    border-bottom: 1px dashed #2c3f51;
+}
+.archives-info .archives-info-meta:hover::before {
+    background: #2c3f51;
+}
+.archives-info .archives-info-meta a {
+    color: #2c3f51;
+    text-decoration: none;
+}
+.archives-info time {
+    margin-right: 4px;
+    color: #999;
+    display: inline-block;
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        var yearArray = [];
+        $(".archives-item").each(function() {
+            var archivesYear = $(this).attr("date");
+            yearArray.push(archivesYear);
+        });
+        var uniqueYear = $.unique(yearArray);
+        for (var i = 0; i < uniqueYear.length; i++) {
+            var html = "<div class='archives-item fadeInDown animated'>" + "<div class='archives-year'>" + "<h3><time datetime='" + uniqueYear[i] + "'>" + uniqueYear[i] + "</time></h3>" + "</div></div>";
+            $("[date='" + uniqueYear[i] + "']:first").before(html);
+        }
+    });
+</script>
+{{/post}}
