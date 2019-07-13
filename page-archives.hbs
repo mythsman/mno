@@ -2,7 +2,6 @@
 {{#post}}
   <article class="archives">
     <section class="archives-content">
-      <span class="archives-top"></span>
       <span class="archives-total">
         {{#get "posts" as |posts postPages|}}
         <strong>
@@ -31,30 +30,6 @@
 .archives {
     width: 90%;
     margin: 40px auto;
-}
-.archives .archives-content::before,
-.archives .archives-content::after {
-    content: " ";
-    position: absolute;
-}
-.archives .archives-content::after {
-    top: 60px;
-    bottom: 52px;
-    width: 4px;
-    margin-left: 2px;
-    background: #f5f5f5;
-    z-index: 1;
-}
-.archives .archives-top {
-    position: absolute;
-    top: 50px;
-    width: 10px;
-    height: 10px;
-    margin-left: -1px;
-    background: #555;
-    opacity: 0.5;
-    border: 1px solid #fff;
-    border-radius: 50%;
 }
 .archives .archives-total {
     position: relative;
