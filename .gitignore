@@ -9,7 +9,7 @@ assets/scss/bourbon/*
 # ignore the sass-cache/
 .sass-cache/*
 **/.sass-cache/*
-*.map
+**/*.map
 
 ### OSX ###
 .DS_Store

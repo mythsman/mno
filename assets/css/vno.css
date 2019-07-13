@@ -56,7 +56,9 @@ body {
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1em;
   color: #666666;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 ::selection {
   background: #f39ca4; }
@@ -266,6 +268,57 @@ hr {
 
 .hidden {
   display: none !important; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0; }
+
+::-webkit-scrollbar-button:start:increment, ::-webkit-scrollbar-button:end:decrement {
+  display: none; }
+
+::-webkit-scrollbar-corner {
+  display: block; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent; }
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.15); }
+
+::-webkit-scrollbar-button:start {
+  width: 10px;
+  height: 10px;
+  background: url(../images/scrollbar_arrow.png) no-repeat 0 0; }
+
+::-webkit-scrollbar-button:start:hover {
+  background: url(../images/scrollbar_arrow.png) no-repeat -15px 0; }
+
+::-webkit-scrollbar-button:start:active {
+  background: url(../images/scrollbar_arrow.png) no-repeat -30px 0; }
+
+::-webkit-scrollbar-button:end {
+  width: 10px;
+  height: 10px;
+  background: url(../images/scrollbar_arrow.png) no-repeat 0 -18px; }
+
+::-webkit-scrollbar-button:end:hover {
+  background: url(../images/scrollbar_arrow.png) no-repeat -15px -18px; }
+
+::-webkit-scrollbar-button:end:active {
+  background: url(../images/scrollbar_arrow.png) no-repeat -30px -18px; }
 
 .post-comments {
   border-top: 1px solid #DDDDDD;
