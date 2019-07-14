@@ -21,7 +21,7 @@
 </style>
 <script src="{{asset "js/jqcloud-1.0.4.min.js"}}" ></script>
 <script>
- document.addEventListener("DOMContentLoaded", function(){
+  $(function(){
    var words = [];
    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
     {{#foreach tags}}
