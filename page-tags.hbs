@@ -29,7 +29,9 @@
       thisTag.text = "{{name}}";
       thisTag.weight = "{{count.posts}}"
       thisTag.link = "/tag/{{slug}}"
-      words.push(thisTag);
+      if(thisTag.text!="MathJax"){
+        words.push(thisTag);
+      }
     {{/foreach}}
    {{/get}}
     $('#keywords').jQCloud(words);
