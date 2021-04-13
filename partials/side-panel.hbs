@@ -4,12 +4,12 @@
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
 
-        {{#if @blog.logo}}
-        <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页"><img src="{{@blog.logo}}" width="80" alt="{{@blog.title}} logo" class="panel-cover__logo logo" /></a>
+        {{#if @site.logo}}
+        <a href="{{@site.url}}" title="前往 {{@site.title}} 的主页"><img src="{{@site.logo}}" width="80" alt="{{@site.title}} logo" class="panel-cover__logo logo" /></a>
         {{/if}}
-        <h1 class="panel-cover__title panel-title"><a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页">{{@blog.title}}</a></h1>
+        <h1 class="panel-cover__title panel-title"><a href="{{@site.url}}" title="前往 {{@site.title}} 的主页">{{@site.title}}</a></h1>
         <hr class="panel-cover__divider" />
-        <p class="panel-cover__description">{{@blog.description}}</p>
+        <p class="panel-cover__description">{{@site.description}}</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary" />
 
         <div class="navigation-wrapper">

@@ -1,8 +1,12 @@
 {
-  "name": "Vno",
+  "name": "vno",
   "version": "0.1.0",
+  "keywords": ["ghost-theme"],
   "engines": {
     "ghost-api": "v2"
+  },
+  "author":{
+    "email":"dqz48548263@qq.com"
   },
   "config": {
     "posts_per_page":4
