@@ -17,6 +17,13 @@
     </section>
   </article>
 
+  {{#prev_post}}
+    <span class="prev_post">上一篇：<a href="{{url}}">{{title}}</a></span>
+  {{/prev_post}}
+  {{#next_post}}
+    <span class="next_post">下一篇：<a href="{{url}}">{{title}}</a></span>
+  {{/next_post}}
+
   {{#has tag="MathJax"}}
     <script src='https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     <script type="text/x-mathjax-config">

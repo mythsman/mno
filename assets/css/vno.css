@@ -384,6 +384,13 @@ hr {
     content: "•";
     margin: 0 .5em; }
 
+.prev_post {
+  font-size: 12px; }
+
+.next_post {
+  font-size: 12px;
+  float: right; }
+
 .post-comments {
   border-top: 1px solid #DDDDDD;
   padding: 60px 0; }
