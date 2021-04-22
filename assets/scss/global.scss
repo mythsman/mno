@@ -468,8 +468,16 @@ hr {
   }
 }
 
+.post_navi{
+  margin-top:5px; 
+  margin-bottom:5px; 
+  width:100%;
+  display:inline-block;
+}
+
 .prev_post{
   font-size:12px;
+  float:left;
 }
 
 .next_post {

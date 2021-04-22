@@ -17,12 +17,14 @@
     </section>
   </article>
 
+  <div class="post_navi">
   {{#prev_post}}
-    <span class="prev_post">上一篇：<a href="{{url}}">{{title}}</a></span>
+    <div class="prev_post">上一篇：<a href="{{url}}">{{title}}</a></div>
   {{/prev_post}}
   {{#next_post}}
-    <span class="next_post">下一篇：<a href="{{url}}">{{title}}</a></span>
+    <div class="next_post">下一篇：<a href="{{url}}">{{title}}</a></div>
   {{/next_post}}
+  </div>
 
   {{#has tag="MathJax"}}
     <script src='https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
