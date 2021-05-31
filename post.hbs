@@ -12,7 +12,8 @@
       <h1 class="post-title">{{{title}}}</h1>
     </header>
 
-    <section class="{{post_class}}">
+    <div id="toc"></div>
+    <section id="toc-content" class="{{post_class}}">
       {{content}}
     </section>
   </article>
@@ -38,3 +39,15 @@
     </script>
   {{/has}}
 {{/post}}
+<script>
+tocbot.init({
+  // Where to render the table of contents.
+  tocSelector: '#toc',
+  // Where to grab the headings to build the table of contents.
+  contentSelector: '#toc-content',
+  // Which headings to grab inside of the contentSelector element.
+  headingSelector: 'h1, h2, h3',
+  // For headings inside relative or absolute positioned containers within content.
+  hasInnerContainers: true,
+});
+</script>
