@@ -39,15 +39,16 @@
     </script>
   {{/has}}
 {{/post}}
+<style>
+  #toc {
+    font-size: 10px;
+  }
+</style>
 <script>
-tocbot.init({
-  // Where to render the table of contents.
-  tocSelector: '#toc',
-  // Where to grab the headings to build the table of contents.
-  contentSelector: '#toc-content',
-  // Which headings to grab inside of the contentSelector element.
-  headingSelector: 'h1, h2, h3',
-  // For headings inside relative or absolute positioned containers within content.
-  hasInnerContainers: true,
-});
+  tocbot.init({
+    tocSelector: '#toc',
+    contentSelector: '#toc-content',
+    headingSelector: 'h1, h2, h3',
+    hasInnerContainers: true,
+  });
 </script>
