@@ -1,6 +1,6 @@
 {
-  "name": "vno",
-  "version": "0.1.0",
+  "name": "mno",
+  "version": "1.0.0",
   "keywords": ["ghost-theme"],
   "engines": {
     "ghost-api": "v2"
