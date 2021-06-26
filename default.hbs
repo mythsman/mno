@@ -29,7 +29,6 @@
     <link href="{{asset "iconfont/iconfont.css"}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "css/tomorrow.css"}}">
     <script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/tocbot.min.js"}}"></script>
     
     {{! Ghost Head }}
     {{ghost_head}}
@@ -57,10 +56,9 @@
 
     
     {{! The main JavaScript file }}
-    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+    <script defer type="text/javascript" src="{{asset "js/main.js"}}"></script>
 
     {{! Highlight.js }}
-    <script type="text/javascript" src="{{asset "js/highlight.pack.js"}}"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script defer type="text/javascript" src="{{asset "js/highlight.pack.js"}}" onload="hljs.initHighlightingOnLoad()"></script>
 </body>
 </html>

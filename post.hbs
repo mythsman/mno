@@ -44,13 +44,8 @@
     font-size: 12px;
   }
 </style>
+
 <script async>
-  tocbot.init({
-    tocSelector: '#toc',
-    contentSelector: '#toc-content',
-    headingSelector: 'h1, h2, h3',
-    hasInnerContainers: true,
-  });
   var disqus_config = function () {
       this.page.url = "{{url absolute="true"}}";
       this.page.identifier = "ghost-{{comment_id}}"
@@ -84,4 +79,10 @@
 
   },1000)
 </script>
+<script defer type="text/javascript" src="{{asset "js/tocbot.min.js"}}" onload="tocbot.init({
+    tocSelector: '#toc',
+    contentSelector: '#toc-content',
+    headingSelector: 'h1, h2, h3',
+    hasInnerContainers: true,
+  });"></script>
 {{/post}}
