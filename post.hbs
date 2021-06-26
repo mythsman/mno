@@ -39,27 +39,49 @@
     </script>
   {{/has}}
 <div id="disqus_thread"></div>
-{{/post}}
 <style>
   #toc {
     font-size: 12px;
   }
 </style>
-<script>
+<script async>
   tocbot.init({
     tocSelector: '#toc',
     contentSelector: '#toc-content',
     headingSelector: 'h1, h2, h3',
     hasInnerContainers: true,
   });
-    var disqus_config = function () {
-        this.page.url = "{{url absolute="true"}}";
-        this.page.identifier = "ghost-{{comment_id}}"
+  var disqus_config = function () {
+      this.page.url = "{{url absolute="true"}}";
+      this.page.identifier = "ghost-{{comment_id}}"
+  };
+  (function isInChina(callback,timeout) {
+    var url = 'https://graph.facebook.com/feed?callback=h';
+    var xhr = new XMLHttpRequest();
+    var called = false;
+    xhr.open('GET', url);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        called = true;
+        callback(false);
+      }
     };
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://mythsman.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+    xhr.send();
+    setTimeout(function() {
+      if (!called) {
+        xhr.abort();
+        callback(true);
+      }
+    }, timeout);
+  })(inChina=>{
+    if(!inChina){
+      var d = document, s = d.createElement('script');
+      s.defer = "defer"
+      s.src = 'https://mythsman.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+
+  },1000)
 </script>
+{{/post}}
