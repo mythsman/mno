@@ -69,10 +69,10 @@
       }
     }, timeout);
   })(inChina=>{
-    if(!inChina){
+    if(!inChina || !mno.disqus.gfw_check ){
       var d = document, s = d.createElement('script');
       s.defer = "defer"
-      s.src = 'https://mythsman.disqus.com/embed.js';
+      s.src = mno.disqus.link
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     }

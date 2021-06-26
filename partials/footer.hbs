@@ -1,9 +1,15 @@
 <footer class="footer">
   <div class="footer__copyright">
-   <span><a href="http://www.beian.miit.gov.cn" target="_blank">苏ICP备15055270号-1</a></span>
-<!--
-   <span style="float: right;">© 2019  All rights reserved.</span>
--->
+   <span id="footer_copyright"></span>
    <span style="float: right;"><a href="https://creativecommons.org/licenses/by/4.0/deed.en"><img src="{{asset "images/cc-by.svg"}}" /></a></span>
   </div>
 </footer>
+<script>
+  (function(){
+    var link = document.createElement("a");
+    link.href= mno.copyright.link
+    link.text= mno.copyright.name
+    link.target = "_blank"
+    document.getElementById("footer_copyright").appendChild(link)
+  })()
+</script>

@@ -1,69 +1,33 @@
 <nav class="cover-navigation navigation--social">
-  <ul class="navigation">
-
-  <!-- Github -->
-  <li class="navigation__item">
-    <a href="https://github.com/mythsman" title="@mythsman" target="_blank">
-      <i class='social iconfont icon-github'></i>
-      <span class="label">Github</span>
-    </a>
-  </li>
-
-  <!-- Douban -->
-  <li class="navigation__item">
-    <a href="https://www.douban.com/people/mythsman/" title="@mythsman" target="_blank">
-      <i class='social iconfont icon-douban '></i>
-      <span class="label">Douban</span>
-    </a>
-  </li>
-
-  <!-- QQ -->
-  <li class="navigation__item">
-    <a href="tencent://message/?Menu=yes&uin=1276077732" title="@阿尔卑斯君°" target="_blank">
-      <i class='social iconfont icon-qq '></i>
-      <span class="label">Douban</span>
-    </a>
-  </li>
-
-  <!-- Bilibili -->
-  <li class="navigation__item">
-    <a href="https://space.bilibili.com/101787792" title="@mythsman" target="_blank">
-      <i class='social iconfont icon-bilibili'></i>
-      <span class="label">Bilibili</span>
-    </a>
-  </li>
-
-  <!-- NetEase -->
-  <li class="navigation__item">
-    <a href="https://music.163.com/#/user/home?id=261910312" title="@mythsman" target="_blank">
-      <i class='social iconfont icon-netease'></i>
-      <span class="label">Netease</span>
-    </a>
-  </li>
-
-  <!-- Steam -->
-  <li class="navigation__item">
-    <a href="https://steamcommunity.com/id/mythsman/" title="@mythsman" target="_blank">
-      <i class='social iconfont icon-steam'></i>
-      <span class="label">Steam</span>
-    </a>
-  </li>
-
-  <!-- RSS -->
-  <li class="navigation__item">
-    <a href="{{@site.url}}/rss/" rel="author" title="RSS" target="_blank">
-      <i class='social fa fa-rss'></i>
-      <span class="label">RSS</span>
-    </a>
-  </li>
-
-  <!-- Email -->
-  <li class="navigation__item">
-    <a href="mailto:mythsman@foxmail.com" title="Mail me">
-      <i class='social fa fa-envelope'></i>
-      <span class="label">Email</span>
-    </a>
-  </li>
-
+  <ul class="navigation" id="social_navigation">
   </ul>
 </nav>
+<script>
+(function(){
+  var social_list = document.getElementById("social_navigation")
+  for (let name in mno.social){
+    let item = mno.social[name]
+
+    let line = document.createElement("li")
+    line.className = "navigation__item"
+
+    let link = document.createElement("a")
+    link.href = item.link
+    link.title = item.name
+    link.target = "_blank"
+    
+    let ico = document.createElement("i")
+    ico.className="social iconfont icon-"+name
+    link.appendChild(ico)
+    
+    let spn = document.createElement("span")
+    spn.className = "label"
+    spn.innerHTML = name
+    link.appendChild(spn)
+
+    line.appendChild(link) 
+    social_list.appendChild(line)
+  }
+
+})()
+</script>
