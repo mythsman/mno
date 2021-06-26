@@ -32,20 +32,6 @@ Vno 是基于 SASS 创建的，但是如果您不再希望继续维护可扩展�
 
 ### 封面
 
-#### 图片和颜色
-
-将您的封面图片放到主题的 `assets/images/` 下，替换掉原来的 `background-cover.jpg` 文件即可（您也可以在博客的设定页面中进行更改）。您也可以改变封面的颜色。找到 `partials/side-panel.hbs` 文件，将 `<div class="panel-cover--overlay cover-blue"></div>` 中的 `cover-orange` 替换成您需要的颜色即可。默认为您提供了七种选择：
-
-* `cover-blue` - #2568A3
-* `cover-green` - #156F78
-* `cover-purple` - #493252
-* `cover-red` - #E25440
-* `cover-orange` - #FB9C50
-* `cover-slate` - #3D4260
-* `cover-disabled` - 透明
-
-#### 头像和简介
-
 头像直接使用了您的博客的 logo。在博客的设定页面中可以进行更改。
 
 您还可以在封面页上写一个简短的介绍。只要您瞄一眼 `partials/side-panel.hbs` 应该就知道怎么做了 :)

@@ -131,34 +131,3 @@
     margin-left: 30px;
   }
 
-// ------------------------------
-// ADDITIONAL COVER COLOURS
-// ------------------------------
-
-.cover-blue {
-  @include linear-gradient(140deg, rgba($blue,.6) 20%, rgba(darken($blue, 20%),.8));
-}
-
-.cover-green {
-  @include linear-gradient(140deg, rgba($green,.6) 20%, rgba(darken($green, 20%),.8));
-}
-
-.cover-purple {
-  @include linear-gradient(140deg, rgba($purple,.6) 20%, rgba(darken($purple, 20%),.8));
-}
-
-.cover-red {
-  @include linear-gradient(140deg, rgba(darken($red, 30%),.6) 20%, rgba(darken($red, 50%),.8));
-}
-
-.cover-orange {
-  @include linear-gradient(140deg, rgba(darken($orange, 30%),.6) 20%, rgba(darken($orange, 50%),.8));
-}
-
-.cover-slate {
-  @include linear-gradient(140deg, rgba($slate,.6) 20%, rgba(darken($slate, 20%),.8));
-}
-
-.cover-disabled {
-  background: none;
-}
