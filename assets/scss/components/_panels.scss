@@ -45,7 +45,7 @@
 
   .panel-cover--collapsed {
     width: 20%;
-    min-width: 260px;
+    min-width: 290px;
     max-width: 700px;
   }
 
@@ -97,6 +97,7 @@
   }
 
   .panel-main__content {
+    min-width: 232px;
     max-width: 620px;
     margin: 0 auto;
   }
