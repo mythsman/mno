@@ -30,11 +30,62 @@ Vno 是基于 SASS 创建的，但是如果您不再希望继续维护可扩展�
 
 一旦您准备就绪，只需要将这个 repo clone 到您博客的主题文件夹下：`content/themes/`，然后重启 ghost，您应该就能在博客的设定面板中看到 `Vno` 了。
 
-### 封面
-
-头像直接使用了您的博客的 logo。在博客的设定页面中可以进行更改。
-
-您还可以在封面页上写一个简短的介绍。只要您瞄一眼 `partials/side-panel.hbs` 应该就知道怎么做了 :)
+### 配置
+需要在站点的code injection里增加一些初始化配置，类似这样：
+```
+<style>
+.mno-cover {
+  background-color: rgba(37, 104, 163, 0);
+  background-image: -webkit-linear-gradient(-410deg, rgba(37, 104, 163, 0.8) 20%, rgba(18, 51, 80, 0.8));
+  background-image: linear-gradient(140deg,rgba(37, 104, 163, 0.3) 20%, rgba(18, 51, 80, 0.3)); }
+</style>
+<script>
+ var mno = {
+    "disqus": {
+        "link": "https://mythsman.disqus.com/embed.js",
+        "gfw_check": true
+    },
+    "copyright": {
+        "link": "http://www.beian.miit.gov.cn",
+        "name": "苏ICP备15055270号-1"
+    },
+    "social": {
+        "github": {
+            "name": "@mythsman",
+            "link": "https://github.com/mythsman"
+        },
+        "douban": {
+            "name": "@mythsman",
+            "link": "https://www.douban.com/people/mythsman/"
+        },
+        "qq": {
+            "name": "@阿尔卑斯君°",
+            "link": "tencent://message/?Menu=yes&uin=1276077732"
+        },
+        "bilibili": {
+            "name": "@mythsman",
+            "link": "https://space.bilibili.com/101787792"
+        },
+        "netease": {
+            "name": "@mythsman",
+            "link": "https://music.163.com/#/user/home?id=261910312"
+        },
+        "steam": {
+            "name": "@mythsman",
+            "link": "https://steamcommunity.com/id/mythsman/"
+        },
+        "rss": {
+            "name": "@mythsman",
+            "link": "https://blog.mythsman.com/rss/"
+        },
+        "mail": {
+            "name": "@mythsman",
+            "link": "mailto:mythsman@foxmail.com"
+        }
+    }
+}
+</script>
+```
 
 #### MathJax
 主题内部集成了MathJax，您只需要在发布文章时，增加一个 "MathJax" 标签，即可让该文章支持 LaTeX 语法。
