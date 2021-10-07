@@ -78,6 +78,15 @@
     }
 
   },1000)
+  setInterval(()=>{
+    let iframes= document.getElementsByTagName('iframe')
+    for(let idx in iframes){
+      let iframe=iframes[idx];
+      if(iframe.title==='Disqus'&&!iframe.src){
+          iframe.parentElement.removeChild(iframe)
+      }
+    }
+  },1000)
 </script>
 <script defer type="text/javascript" src="{{asset "js/tocbot.min.js"}}" onload="tocbot.init({
     tocSelector: '#toc',

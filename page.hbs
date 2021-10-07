@@ -42,6 +42,15 @@
       (d.head || d.body).appendChild(s);
     }
 
+  },1000);
+  setInterval(()=>{
+    let iframes= document.getElementsByTagName('iframe')
+    for(let idx in iframes){
+      let iframe=iframes[idx];
+      if(iframe.title==='Disqus'&&!iframe.src){
+          iframe.parentElement.removeChild(iframe)
+      }
+    }
   },1000)
 </script>
 {{/post}}
