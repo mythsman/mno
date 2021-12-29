@@ -14,7 +14,7 @@
           <div class="archives-item" date="{{date format="YYYY"}}" data-anijs="if: scroll, on: window, do: fadeInDown animated, before: scrollReveal">
             <div class="archives-info">
               <div class="archives-info-meta">
-                <a href="{{url}}">
+                <a href="{{url}}" style="overflow:hidden;max-width:100%;display:inline-block;white-space:nowrap;text-overflow:ellipsis">
                   <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>
                   <time class="archives-date" datetime="{{date published_at format="MM-DD"}}">{{date published_at format="MM-DD"}}</time>
                 {{title}}
