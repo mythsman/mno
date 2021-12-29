@@ -4,30 +4,63 @@
 </nav>
 <script>
 (function(){
-  var social_list = document.getElementById("social_navigation")
-  for (let name in mno.social){
-    let item = mno.social[name]
+  function build_line(name,url){
 
     let line = document.createElement("li")
     line.className = "navigation__item"
 
     let link = document.createElement("a")
-    link.href = item.link
-    link.title = item.name
+    link.href = url
+    link.title = name
     link.target = "_blank"
-    
+
     let ico = document.createElement("i")
     ico.className="social iconfont icon-"+name
     link.appendChild(ico)
-    
+
     let spn = document.createElement("span")
     spn.className = "label"
     spn.innerHTML = name
     link.appendChild(spn)
 
     line.appendChild(link) 
-    social_list.appendChild(line)
+
+    return line;
   }
+
+  var social_list = document.getElementById("social_navigation")
+
+  {{#if @custom.github}}
+    social_list.appendChild(build_line("github","{{@custom.github}}"))
+  {{/if}}
+
+  {{#if @custom.douban}}
+    social_list.appendChild(build_line("douban","{{@custom.douban}}"))
+  {{/if}}
+
+  {{#if @custom.qq}}
+    social_list.appendChild(build_line("qq","{{@custom.qq}}"))
+  {{/if}}
+
+  {{#if @custom.bilibili}}
+    social_list.appendChild(build_line("bilibili","{{@custom.bilibili}}"))
+  {{/if}}
+
+  {{#if @custom.netease}}
+    social_list.appendChild(build_line("netease","{{@custom.netease}}"))
+  {{/if}}
+
+  {{#if @custom.steam}}
+    social_list.appendChild(build_line("steam","{{@custom.steam}}"))
+  {{/if}}
+
+  {{#if @custom.rss}}
+    social_list.appendChild(build_line("rss","{{@custom.rss}}"))
+  {{/if}}
+
+  {{#if @custom.mail}}
+    social_list.appendChild(build_line("mail","{{@custom.mail}}"))
+  {{/if}}
 
 })()
 </script>
