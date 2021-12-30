@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{! Meta }}
+    {{#is "page,post,home,index,tag,author,private" }}
     <title>{{meta_title}}</title>
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta property="og:title" content="{{meta_title}}">
+    {{else}}
+    <title>{{@site.title}}</title>
+    <meta name="twitter:title" content="{{@site.title}}">
+    <meta property="og:title" content="{{@site.title}}">
+    {{/is}}
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,10 +23,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{meta_title}}">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="{{meta_title}}">
 
     {{! Styles and Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/vno.css"}}" />
