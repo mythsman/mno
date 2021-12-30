@@ -38,8 +38,10 @@
         <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
     </span>
 
-    {{> side-panel }}
-
+    {{#is "home" }}
+      {{> side-panel side_mode=false }}
+    {{else}}
+      {{> side-panel side_mode=true }}
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
             {{{body}}}
@@ -47,6 +49,8 @@
             {{> footer}}
         </div>
     </div>
+    {{/is}}
+
 
     {{! Ghost Footer }}
     {{ghost_foot}}
