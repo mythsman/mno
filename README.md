@@ -10,48 +10,59 @@
 
 ## 特性
 
-### 响应式设计和动画
+#### 响应式设计和动画
 
 Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上都表现良好。很多事件是由动画驱动的，这要感谢 [Animate.css](https://animate.style/) 的帮助。
 
-### 代码高亮&MathJax
+#### 代码高亮&MathJax
 
 使用了 [highlight.js](http://highlightjs.org) 作为主题的代码高亮引擎。您可以在您的技术博客上以简洁优美的形式呈现您的代码。同时按需集成了[MathJax](https://www.mathjax.org/)，帮助您方便地呈现数学公式。[代码参考](https://blog.mythsman.com/post/60c83f88e7f4c17ce29199fb/) [公式参考](https://blog.mythsman.com/post/5d2fe60e976abc05b345448d/)
 
-### Ghost自定义配置
+#### Ghost自定义配置
 
 所有配置都可以直接通过 Ghost 的[后台自定义配置](https://ghost.org/docs/themes/custom-settings/)完成，几乎不用直接修改代码。
 
-### 简约封面&社交按钮
+#### 简约封面&社交按钮
 
 博客主页采用一个精简的背景封面和多个可选的社交链接，目前支持集成Github、Douban、QQ、Bilibili、Netease、Steam、Rss、Email等图标。这得感谢[iconfont 矢量库](https://www.iconfont.cn/)。[主页参考](https://blog.mythsman.com)
 
-### 无限下拉的首页
+#### 无限下拉的首页
 
 这里借鉴了Ghost官方的 [Casper](https://github.com/TryGhost/Casper/blob/main/assets/js/infinite-scroll.js) 主题，集成了首屏无限下拉的功能，免去了总是要点“下一页”的烦恼。[下拉参考](https://blog.mythsman.com/posts)
 
-### 集成了归档页和标签云
+#### 集成了归档页和标签云
 
-为了方便快速检索所有文章标题，支持了archives页面，同时利用[jqcloud] 集成了基于词频的标签云。[归档页参考](https://blog.mythsman.com/archives) [标签云参考](https://blog.mythsman.com/tags)
+为了方便快速检索所有文章标题，支持了archives页面，同时利用[jqcloud](https://github.com/lucaong/jQCloud) 集成了基于词频的标签云。[归档页参考](https://blog.mythsman.com/archives) [标签云参考](https://blog.mythsman.com/tags)
 
-### 支持集成Disqus评论
+#### 支持集成Disqus评论
 
 思考再三还是集成了Disqus评论，不过由于大陆内地被GFW封的比较厉害，因此增加了一个GFW检测功能，只有当前用户能访问外网时、才会在 post 底部弹出Disqus评论框。
 
-## 安装
+#### 支持切换首行缩进
+
+不同人的写作习惯不同，markdown 默认不支持段落首行缩进。而Mno这里能够根据配置支持段落自动首行缩进。
+
+## 配置
+
+#### 安装
 
 您应该已经建立了一个可用的 [ghost 博客](https://ghost.org) (version > 4.0.0 )。如果您还没有准备好，请参考[官方的安装页面](http://docs.ghost.org/installation/)来配置一个属于您自己的 ghost 博客。
 
 一旦您准备就绪，只需要将这个 repo clone 到您博客的主题文件夹下：`content/themes/`，然后重启 ghost，您应该就能在博客的设定面板中看到 `Mno` 了。
 
-## 配置
+#### Ghost后台配置
+TODO
 
-#### MathJax
-主题内部集成了MathJax，您只需要在发布文章时，增加一个 "MathJax" 标签，即可让该文章支持 LaTeX 语法。
-
-#### 导航按钮
+#### 导航栏配置
 
 也在 `partials/side-panel.hbs` 文件中定义。不要忘了把它们换成您自己的链接。您不应该更改或者至少保留 `/#blog` 链接，因为这个链接将触发一个转场到您的博客主页面的动画。
+
+#### 动态路由配置
+TODO
+
+#### MathJax配置
+TODO
+主题内部集成了MathJax，您只需要在发布文章时，增加一个 "MathJax" 标签，即可让该文章支持 LaTeX 语法。
 
 
 ## 开发
@@ -60,7 +71,7 @@ Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上�
 
 您可以在终端中进行一些检查，来看看是否已经安装完成。如果没有问题的话，您应该可以在命令行后看到对应的工具的版本号。
 
-## SASS
+#### SASS
 
 Vno 是基于 SASS 创建的，但是如果您不再希望继续维护可扩展性，您也可以忽略这个再开发的流程。不过如果您懂一些 HTML 和 CSS 的话，对现有主题做出修改是轻而易举的。
 
@@ -71,7 +82,7 @@ sass -v
 
 如果 SASS 没有能正确安装的话，请参见 [Sass 安装页面](http://sass-lang.com/install)进行安装。
 
-### Bourbon
+#### Bourbon
 
 ```bash
 bourbon version
@@ -80,7 +91,7 @@ bourbon version
 
 如果 Bourbon 没有能正确安装的话，请参见 [Bourbon 的网站](http://bourbon.io)进行安装。
 
-### 开始开发
+#### 开始开发
 
 验证安装后就可以开始开发了。首先我们要将 bourbon 加载到 `scss` 文件夹里。
 
@@ -104,7 +115,7 @@ sass --watch assets/scss/vno.scss:assets/css/vno.css
 
 现在，任何对于 scss 文件的改动都将自动反映到最终的 `/css/vno.css` 文件中了。
 
-### 祝你好运
+#### 祝你好运
 
 玩得开心，也请记得给我反馈。如果您发现了什么 bug (我刚入门 web 开发，这简直是必然的)，请直接指出，如果还能附带一个 pull request 修正的话，那真的感激万分！
 
