@@ -19,9 +19,10 @@
     box-shadow: none;
   }
 </style>
-<script src="{{asset "js/jqcloud-1.0.4.min.js"}}" ></script>
-<script>
-  $(function(){
+<script defer type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></script>
+<script defer src="{{asset "js/jqcloud-1.0.4.min.js"}}" ></script>
+<script defer >
+  window.ready(function(){
    var words = [];
    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
     {{#foreach tags}}

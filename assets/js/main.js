@@ -1,21 +1,25 @@
-$(document).ready(function() {
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
 
-  $('.btn-mobile-menu__icon').click(function() {
-    $('.navigation-wrapper').toggleClass('visible');
-    $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
-  });
+window.ready(function(){
+  document.querySelector('.btn-mobile-menu').addEventListener('click',function(){
+    document.querySelector('.navigation-wrapper').classList.toggle('visible');
+    document.querySelector('.navigation-wrapper').classList.toggle('animated');
+    document.querySelector('.navigation-wrapper').classList.toggle('fadeIn');
 
-  $('.navigation-wrapper .blog-button').click(function() {
-    if ($('.navigation-wrapper').css('display') == "block") {
-      $('.navigation-wrapper').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-        $('.navigation-wrapper').toggleClass('visible animated');
-      });
-    }
-    
-    $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
-  });
+    let menu = document.querySelector('.btn-mobile-menu__icon');
+    ['fa-list','fa-angle-up','animated','fadeIn'].forEach(function(className){
+      menu.classList.toggle(className);
+    })
+  }, false);
+
 });
-$(document.links).filter(function() {
-    return this.hostname != window.location.hostname;
-}).attr('target', '_blank');
 
+document.querySelectorAll('a').forEach(link => {
+  link.hostname !== location.hostname && link.setAttribute('target', '_blank');
+});
