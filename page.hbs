@@ -85,3 +85,11 @@ const fetchRequest = (url, params={}, timeout=10000) => {
   {{/if}}
 </script>
 {{/post}}
+
+{{#if @custom.paragraph_indent }}
+  <style scoped>
+  p {
+    text-indent:2em
+  }
+  </style>
+{{/if}}
