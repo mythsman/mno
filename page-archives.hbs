@@ -11,7 +11,7 @@
       </span>
       {{#get "posts" limit="all" order="published_at desc"}}
         {{#foreach posts}}
-          <div class="archives-item" date="{{date format="YYYY"}}" data-anijs="if: scroll, on: window, do: fadeInDown animated, before: scrollReveal">
+          <div class="archives-item" date="{{date format="YYYY"}}">
             <div class="archives-info">
               <div class="archives-info-meta">
                 <a href="{{url}}" style="overflow:hidden;max-width:100%;display:inline-block;white-space:nowrap;text-overflow:ellipsis">
@@ -106,8 +106,9 @@
     display: inline-block;
 }
 </style>
-<script>
-    $(function(){
+<script defer type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></script>
+<script defer>
+    window.ready(function(){
         var yearArray = [];
         $(".archives-item").each(function() {
             var archivesYear = $(this).attr("date");
@@ -115,7 +116,7 @@
         });
         var uniqueYear = $.unique(yearArray);
         for (var i = 0; i < uniqueYear.length; i++) {
-            var html = "<div class='archives-item fadeInDown animated'>" + "<div class='archives-year'>" + "<h3><time datetime='" + uniqueYear[i] + "'>" + uniqueYear[i] + "</time></h3>" + "</div></div>";
+            var html = "<div class='archives-item '>" + "<div class='archives-year'>" + "<h3><time datetime='" + uniqueYear[i] + "'>" + uniqueYear[i] + "</time></h3>" + "</div></div>";
             $("[date='" + uniqueYear[i] + "']:first").before(html);
         }
     });
