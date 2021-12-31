@@ -1,4 +1,5 @@
-function ready(fn) {
+// Mock jQuery.ready
+window.ready = (fn) => {
   if (document.readyState != 'loading'){
     fn();
   } else {
@@ -6,11 +7,23 @@ function ready(fn) {
   }
 }
 
+// Util for iterate list
+const forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]);
+  }
+};
+
+// Util for animate.css
 const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
-    const node = document.querySelector(element);
+
+    let node = element; 
+    if( typeof element !== 'object'){
+      node = document.querySelector(element);
+    }
 
     node.classList.add(`${prefix}animated`, animationName);
 
@@ -24,8 +37,17 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
 
-window.ready(function(){
-  document.querySelector('.btn-mobile-menu').addEventListener('click',function(){
+// Auto add _blank for outer link
+window.ready(()=>{
+  document.querySelectorAll('a').forEach(link => {
+    link.hostname !== location.hostname && link.setAttribute('target', '_blank');
+  });
+})
+
+window.ready(()=>{
+
+  // Handle mobile navigation
+  document.querySelector('.btn-mobile-menu').addEventListener('click',()=>{
     if(document.querySelector('.navigation-wrapper').classList.contains('visible')){
       // hide navigation
       animateCSS('.navigation-wrapper','bounceOutUp').then((msg)=>{
@@ -48,8 +70,26 @@ window.ready(function(){
 
   }, false);
 
+
+  // Logo shake
+  document.querySelector('.panel-cover__logo').addEventListener('mouseover',(event)=>{
+    animateCSS(event.target,'rubberBand');
+  })
+
+  // Click btn shake
+  let tab_btns = document.querySelectorAll('.cover-navigation--primary .navigation__item');
+  forEach(tab_btns , (idx,element)=>{
+    element.addEventListener('mouseover',(event)=>{
+      animateCSS(event.target,'pulse');
+    });
+  });
+
+  // Social btn shake
+  let social_btns = document.querySelectorAll('.navigation--social .navigation__item');
+  forEach(social_btns, (idx, element)=>{
+    element.addEventListener('mouseover',(event)=>{
+      animateCSS(event.target,'swing');
+    });
+  });
 });
 
-document.querySelectorAll('a').forEach(link => {
-  link.hostname !== location.hostname && link.setAttribute('target', '_blank');
-});
