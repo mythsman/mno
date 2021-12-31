@@ -1,17 +1,12 @@
 <footer class="footer">
   <div class="footer__copyright">
-   <span id="footer_copyright"></span>
-   <span style="float: right;"><a href="https://creativecommons.org/licenses/by/4.0/deed.en"><img src="{{asset "images/cc-by.svg"}}" /></a></span>
+    {{#if @custom.icp_name }}
+      <span>
+        <a href="{{@custom.icp_link}}" target="_blank">{{@custom.icp_name}}</a>    
+      </span>
+    {{/if}}
+    <span style="float: right;"><a href="https://creativecommons.org/licenses/by/4.0/deed.en"><img src="{{asset "images/cc-by.svg"}}" /></a></span>
+    <span style="float:right;margin-right:10px">Themed by <a href="">Mno</a></span>
+    <span style="float:right;margin-right:10px">Powered by <a href="">Ghost</a></span>
   </div>
 </footer>
-<script>
-  {{#if @custom.icp_name }}
-    (function(){
-      var link = document.createElement("a");
-      link.href= "{{@custom.icp_link}}"
-      link.text= "{{@custom.icp_name}}"
-      link.target = "_blank"
-      document.getElementById("footer_copyright").appendChild(link)
-    })()
-  {{/if}}
-</script>
