@@ -89,7 +89,7 @@ bourbon version
 > Bourbon 4.0.1
 ```
 
-如果 Bourbon 没有能正确安装的话，请参见 [Bourbon 的网站](http://bourbon.io)进行安装。
+如果 Bourbon 没有能正确安装的话，请参见 [Bourbon 的网站](http://bourbon.io)进行安装。当前代码只支持 bourbon 4.0.1 版本，如默认安装了 bourbon 5+ 的版本，则需要回退一下。。。
 
 #### 开始开发
 

@@ -27,21 +27,24 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 window.ready(function(){
   document.querySelector('.btn-mobile-menu').addEventListener('click',function(){
     if(document.querySelector('.navigation-wrapper').classList.contains('visible')){
-      animateCSS('.navigation-wrapper','fadeOutUp').then((msg)=>{
+      // hide navigation
+      animateCSS('.navigation-wrapper','bounceOutUp').then((msg)=>{
         document.querySelector('.navigation-wrapper').classList.toggle('visible');
       });
-      document.querySelector('.btn-mobile-menu__icon').classList.toggle('fa-angle-up');
-      document.querySelector('.btn-mobile-menu__icon').classList.toggle('fa-list');
-      animateCSS('.btn-mobile-menu__icon','fadeIn');
+      animateCSS('.btn-mobile-close__icon','fadeOut').then(msg=>{
+        document.querySelector('.btn-mobile-close__icon').classList.toggle('hidden');
+        document.querySelector('.btn-mobile-menu__icon').classList.toggle('hidden');
+      });
     }else{
+      // show navigation
       document.querySelector('.navigation-wrapper').classList.toggle('visible');
-      animateCSS('.navigation-wrapper','fadeInDown');
-      document.querySelector('.btn-mobile-menu__icon').classList.toggle('fa-angle-up');
-      document.querySelector('.btn-mobile-menu__icon').classList.toggle('fa-list');
-      animateCSS('.btn-mobile-menu__icon','fadeOut');
+      animateCSS('.navigation-wrapper','bounceInDown');
+
+      animateCSS('.btn-mobile-menu__icon','fadeOut').then(msg=>{
+        document.querySelector('.btn-mobile-menu__icon').classList.toggle('hidden');
+        document.querySelector('.btn-mobile-close__icon').classList.toggle('hidden');
+      });
     }
-
-
 
   }, false);
 
