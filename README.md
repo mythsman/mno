@@ -109,7 +109,7 @@ bourbon install --path assets/scss
 pwd
 > In the vno theme root folder: {blog_path}/content/themes/vno
 
-sass --watch assets/scss/vno.scss:assets/css/vno.css
+sass --watch assets/scss/vno.scss:assets/css/vno.css --style compressed
 >>>> Sass is watching for changes. Press Ctrl-C to stop.
 ```
 
