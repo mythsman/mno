@@ -88,7 +88,7 @@ window.ready(()=>{
   let social_btns = document.querySelectorAll('.navigation--social .navigation__item');
   forEach(social_btns, (idx, element)=>{
     element.addEventListener('mouseover',(event)=>{
-      animateCSS(event.target,'swing');
+      animateCSS(event.target,'rubberBand');
     });
   });
 });
