@@ -8,14 +8,14 @@ window.ready = (fn) => {
 }
 
 // Util for iterate list
-const forEach = function (array, callback, scope) {
+window.forEach = (array, callback, scope) => {
   for (var i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]);
   }
 };
 
 // Util for animate.css
-const animateCSS = (element, animation, prefix = 'animate__') =>
+window.animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
@@ -37,14 +37,12 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
 
-// Auto add _blank for outer link
 window.ready(()=>{
+
+  // Auto add _blank for outer link
   document.querySelectorAll('a').forEach(link => {
     link.hostname !== location.hostname && link.setAttribute('target', '_blank');
   });
-})
-
-window.ready(()=>{
 
   // Handle mobile navigation
   document.querySelector('.btn-mobile-menu').addEventListener('click',()=>{
