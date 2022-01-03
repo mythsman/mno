@@ -16,7 +16,7 @@ Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上�
 
 #### 代码高亮&MathJax
 
-使用了 [highlight.js](http://highlightjs.org) 插件，并以[tomorrow-night](https://highlightjs.org/static/demo/)作为主题的代码高亮引擎。您可以在您的技术博客上以简洁优美的形式呈现您的代码。同时按需集成了[MathJax](https://www.mathjax.org/)，帮助您方便地呈现数学公式。[代码参考](https://blog.mythsman.com/post/60c83f88e7f4c17ce29199fb/) [公式参考](https://blog.mythsman.com/post/5d2fe60e976abc05b345448d/)
+使用了 [highlight.js](http://highlightjs.org) 插件，并以[tomorrow-night](https://highlightjs.org/static/demo/)作为主题的代码高亮引擎。您可以在您的技术博客上以简洁优美的形式呈现您的代码。同时按需集成了[MathJax](https://www.mathjax.org/)，帮助您方便地呈现数学公式。
 
 #### Ghost自定义配置
 
@@ -24,15 +24,15 @@ Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上�
 
 #### 简约封面&社交按钮
 
-博客主页采用一个精简的背景封面和多个可选的社交链接，目前支持集成Github、Douban、QQ、Bilibili、Netease、Steam、Rss、Email等图标。这得感谢[iconfont 矢量库](https://www.iconfont.cn/)。[主页参考](https://blog.mythsman.com)
+博客主页采用一个精简的背景封面和多个可选的社交链接，目前支持集成Github、Douban、QQ、Bilibili、Netease、Steam、Rss、Email等图标。这得感谢[iconfont 矢量库](https://www.iconfont.cn/)。
 
 #### 无限下拉的首页
 
-这里借鉴了Ghost官方的 [Casper](https://github.com/TryGhost/Casper/blob/main/assets/js/infinite-scroll.js) 主题，集成了首屏无限下拉的功能，免去了总是要点“下一页”的烦恼。[下拉参考](https://blog.mythsman.com/posts)
+这里借鉴了Ghost官方的 [Casper](https://github.com/TryGhost/Casper/blob/main/assets/js/infinite-scroll.js) 主题，集成了首屏无限下拉的功能，免去了总是要点“下一页”的烦恼。
 
 #### 集成了归档页和标签云
 
-为了方便快速检索所有文章标题，支持了archives页面，同时利用[jqcloud](https://github.com/lucaong/jQCloud) 集成了基于词频的标签云。[归档页参考](https://blog.mythsman.com/archives) [标签云参考](https://blog.mythsman.com/tags)
+为了方便快速检索所有文章标题，支持了archives页面，同时利用[jqcloud](https://github.com/lucaong/jQCloud) 集成了基于词频的标签云。
 
 #### 支持集成Disqus评论
 
@@ -107,13 +107,13 @@ bourbon install --path assets/scss
 
 ```bash
 pwd
-> In the vno theme root folder: {blog_path}/content/themes/vno
+> In the mno theme root folder: {blog_path}/content/themes/mno
 
 sass --watch assets/scss/mno.scss:assets/mno.css
 >>>> Sass is watching for changes. Press Ctrl-C to stop.
 ```
 
-现在，任何对于 scss 文件的改动都将自动反映到最终的 `/css/vno.css` 文件中了。
+现在，任何对于 scss 文件的改动都将自动反映到最终的 `mno.css` 文件中了。
 
 #### 祝你好运
 
