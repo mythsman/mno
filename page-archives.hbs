@@ -120,8 +120,7 @@
         for (let i = 0; i < uniqueYear.length; i++) {
 	    let archive_year = document.createElement('div');
 	    archive_year.classList='archives-item';
-            var html = "<div class='archives-year'>" + "<h3><time datetime='" + uniqueYear[i] + "'>" + uniqueYear[i] + "</time></h3>" + "</div>";
-	    archive_year.innerHTML=html;
+            archive_year.innerHTML = "<div class='archives-year'>" + "<h3><time datetime='" + uniqueYear[i] + "'>" + uniqueYear[i] + "</time></h3>" + "</div>";
 	    let first_year = document.querySelector('div[date="'+uniqueYear[i]+'"]');
 	    archive_content.insertBefore(archive_year,first_year);
         }
