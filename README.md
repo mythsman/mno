@@ -16,7 +16,7 @@ Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上�
 
 #### 代码高亮&MathJax
 
-使用了 [highlight.js](http://highlightjs.org) 作为主题的代码高亮引擎。您可以在您的技术博客上以简洁优美的形式呈现您的代码。同时按需集成了[MathJax](https://www.mathjax.org/)，帮助您方便地呈现数学公式。[代码参考](https://blog.mythsman.com/post/60c83f88e7f4c17ce29199fb/) [公式参考](https://blog.mythsman.com/post/5d2fe60e976abc05b345448d/)
+使用了 [highlight.js](http://highlightjs.org) 插件，并以[tomorrow-night](https://highlightjs.org/static/demo/)作为主题的代码高亮引擎。您可以在您的技术博客上以简洁优美的形式呈现您的代码。同时按需集成了[MathJax](https://www.mathjax.org/)，帮助您方便地呈现数学公式。[代码参考](https://blog.mythsman.com/post/60c83f88e7f4c17ce29199fb/) [公式参考](https://blog.mythsman.com/post/5d2fe60e976abc05b345448d/)
 
 #### Ghost自定义配置
 
