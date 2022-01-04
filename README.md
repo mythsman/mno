@@ -67,7 +67,7 @@ TODO
 
 ## 开发
 
-为了简单地对主题进行修改和开发，您需要安装 sass 编译器以及 bourbon。如果您在本地有 ghost 环境的话，这些应该已经安装好了，因为 ghost 运行是需要这些部件的。
+为了简单地对主题进行修改和开发，您需要安装 sass 编译器。如果您在本地有 ghost 环境的话，这些应该已经安装好了，因为 ghost 运行是需要这些部件的。
 
 您可以在终端中进行一些检查，来看看是否已经安装完成。如果没有问题的话，您应该可以在命令行后看到对应的工具的版本号。
 
@@ -82,28 +82,9 @@ sass -v
 
 如果 SASS 没有能正确安装的话，请参见 [Sass 安装页面](http://sass-lang.com/install)进行安装。
 
-#### Bourbon
-
-```bash
-bourbon version
-> Bourbon 4.0.1
-```
-
-如果 Bourbon 没有能正确安装的话，请参见 [Bourbon 的网站](http://bourbon.io)进行安装。当前代码只支持 bourbon 4.0.1 版本，如默认安装了 bourbon 5+ 的版本，则需要回退一下。。。
-
 #### 开始开发
 
-验证安装后就可以开始开发了。首先我们要将 bourbon 加载到 `scss` 文件夹里。
-
-在主题文件夹下执行 `bourbon install` 来加载 bourbon：
-
-```bash
-bourbon install --path assets/scss
-> bourbon files installed to assets/scss/bourbon/
-//Or "Bourbon files already installed, doing nothing." if you already installed it.
-```
-
-然后就可以使用 sass 的命令行工具来监视文件夹中的 scss 文件的改动，并自动重新编译了。
+使用 sass 的命令行工具来监视文件夹中的 scss 文件的改动，并自动重新编译了。
 
 ```bash
 pwd

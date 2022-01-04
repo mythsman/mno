@@ -207,17 +207,6 @@ pre {
   color: $gray-dark;
 }
 
-.block-heading {
-  @include column(12);
-  position: relative;
-  bottom: -15px;
-  font-size: .8em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .label {
   position: relative;
   display: inline-block;
