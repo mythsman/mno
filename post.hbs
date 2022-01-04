@@ -38,7 +38,10 @@
       });
     </script>
   {{/has}}
-<div id="disqus_thread"></div>
+  <div style="margin-top: 30px;margin-bottom: 30px;text-align: center;">
+    <span id="disqus_btn" class="btn hidden" style="cursor:pointer" >Disqus</span>
+  </div>
+  <div id="disqus_thread"></div>
 <style>
   .toc {
     font-size: 12px;
@@ -46,29 +49,13 @@
 </style>
 
 <script async>
-//fetch with timeout
-const fetchRequest = (url, params={}, timeout=10000) => {
-    let isTimeout = false;
-    return new Promise(function(resolve, reject) {
-        const TO = setTimeout(function() {
-            isTimeout = true;
-            reject(new Error('Fetch timeout'));
-        }, timeout);
 
-        fetch(url, params)
-            .then(res => {
-                clearTimeout(TO)
-                if(!isTimeout) {
-                    resolve(res)
-                }
-            }).catch(e => {
-                if( isTimeout ){
-                    return
-                }
-                reject(e)
-            })
-    })
-}
+window.ready(()=>{
+  document.querySelector("#disqus_btn").addEventListener('click',()=>{
+    document.querySelector("#disqus_btn").classList.add('hidden');
+    show_disqus();
+  });
+
 
   {{#if @custom.disqus_link}}
 
@@ -90,34 +77,38 @@ const fetchRequest = (url, params={}, timeout=10000) => {
       }
 
 
+      function show_disqus_btn(){
+        document.querySelector("#disqus_btn").classList.remove('hidden');
+      }
+      
       function show_disqus(){
-	console.log("Facebook contected , disqus is shown.");
-	var d = document, s = d.createElement('script');
+        console.log("Facebook contected , disqus is shown.");
+        var d = document, s = d.createElement('script');
         s.defer = "defer"
         s.src = "{{@custom.disqus_link}}"
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
-	hide_ads();
-
+        hide_ads();
       }
 
-      function hide_disqus(){
+      function hide_disqus_btn(){
 	console.log("GFW detected , disqus is hidden.");
       }
 
       fetchRequest("https://graph.facebook.com/feed?callback=h",{},1000)
         .then(res=>{
 	  if(res.status===200){
-	    show_disqus();
+	    show_disqus_btn();
 	  }else{
-	    hide_disqus();
+	    hide_disqus_btn();
 	  }
 	})
 	.catch(e=>{
 	   console.log(e);
-	   hide_disqus();
+	   hide_disqus_btn();
 	})
   {{/if}}
+});
 </script>
 <script defer type="text/javascript" src="{{asset "js/tocbot-4.11.1.min.js"}}" onload="tocbot.init({
     tocSelector: '.toc',
