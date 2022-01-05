@@ -2,11 +2,18 @@
 // MEDIA QUERIES
 // ------------------------------
 
-@media all and (min-width: 1500px) {
+@media all and (min-width: 1600px) {
+  .panel-main__inner {
+    padding: 0 30px;
+  }
 
 }
 
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1400px) {
+  .content-wrapper {
+    margin-left: 280px;
+    width: auto;
+  }
 
 }
 
@@ -45,6 +52,9 @@
 // ------------------------------
 
 @media all and (max-width: 960px) {
+  body {
+    overflow-y: scroll;
+  }
 
   .btn-mobile-menu {
     display: block;

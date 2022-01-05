@@ -16,7 +16,7 @@ body {
   font-size: 1em;
   color: $gray-darker;
   -webkit-font-smoothing: antialiased;
-  overflow-y: scroll;
+  overflow-y: overlay;
   overflow-x: hidden;
 }
 
