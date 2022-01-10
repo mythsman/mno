@@ -1045,8 +1045,8 @@ input[type=tel]:focus {
     width: 25.8%;
   }
 
-  .post image {
-    box-shadow: none !important;
+  .post img {
+    box-shadow: none;
   }
 
   .content-wrapper {
