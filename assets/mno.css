@@ -508,7 +508,6 @@ hr {
   display: block;
 }
 .post pre {
-  width: 95%;
   overflow: auto;
 }
 .post hr {
@@ -1047,7 +1046,7 @@ input[type=tel]:focus {
   }
 
   .post image {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   .content-wrapper {
