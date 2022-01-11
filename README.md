@@ -75,11 +75,6 @@ TODO
 
 Vno 是基于 SASS 创建的，但是如果您不再希望继续维护可扩展性，您也可以忽略这个再开发的流程。不过如果您懂一些 HTML 和 CSS 的话，对现有主题做出修改是轻而易举的。
 
-```bash
-sass -v
-> Sass 3.3.6 (Maptastic Maple)
-```
-
 如果 SASS 没有能正确安装的话，请参见 [Sass 安装页面](http://sass-lang.com/install)进行安装。
 
 #### 开始开发
