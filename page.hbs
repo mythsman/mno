@@ -13,67 +13,14 @@
     <span id="disqus_btn" class="btn hidden" style="cursor:pointer" >Disqus</span>
   </div>
   <div id="disqus_thread"></div>
-  <script async>
-
-window.ready(()=>{
-  document.querySelector("#disqus_btn").addEventListener('click',()=>{
-    document.querySelector("#disqus_btn").classList.add('hidden');
-    show_disqus();
-  });
-
 
   {{#if @custom.disqus_link}}
-
-    let disqus_config = function () {
-      this.page.url = "{{url absolute="true"}}";
-      this.page.identifier = "ghost-{{comment_id}}"
-    };
-
-      function hide_ads(){
-        setInterval(()=>{
-          let iframes= document.getElementsByTagName('iframe')
-          for(let idx in iframes){
-            let iframe=iframes[idx];
-            if(iframe.title==='Disqus'&&!iframe.src){
-              iframe.parentElement.removeChild(iframe)
-            }
-          }
-        },1000)
-      }
-
-
-      function show_disqus_btn(){
-        document.querySelector("#disqus_btn").classList.remove('hidden');
-      }
-
-      function show_disqus(){
-        console.log("Facebook contected , disqus is shown.");
-        var d = document, s = d.createElement('script');
-        s.defer = "defer"
-        s.src = "{{@custom.disqus_link}}"
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        hide_ads();
-      }
-
-      function hide_disqus_btn(){
-	console.log("GFW detected , disqus is hidden.");
-      }
-
-      fetchRequest("https://graph.facebook.com/feed?callback=h",{},1000)
-        .then(res=>{
-	  if(res.status===200){
-	    show_disqus_btn();
-	  }else{
-	    hide_disqus_btn();
-	  }
-	})
-	.catch(e=>{
-	   hide_disqus_btn();
-	})
+    <script defer type="text/javascript" src="{{asset 'js/disqus.js'}}" onload="disqus_init({
+        btn: '#disqus_btn',
+        link: '{{ @custom.disqus_link}}'
+      })">
+    </script>
   {{/if}}
-});
-</script>
 {{/post}}
 
 {{#if @custom.paragraph_indent }}
