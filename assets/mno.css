@@ -451,23 +451,6 @@ hr {
   margin: 0 0.5em;
 }
 
-.post_navi {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 100%;
-  display: inline-block;
-}
-
-.prev_post {
-  font-size: 12px;
-  float: left;
-}
-
-.next_post {
-  font-size: 12px;
-  float: right;
-}
-
 .post-comments {
   border-top: 1px solid #DDDDDD;
   padding: 60px 0;
@@ -516,6 +499,28 @@ hr {
   width: 30%;
   margin: 2em 0;
   border-top: 1px solid #DDDDDD;
+}
+
+.post_navi {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  display: inline-block;
+}
+.post_navi .prev_post {
+  font-size: 12px;
+  float: left;
+}
+.post_navi .next_post {
+  font-size: 12px;
+  float: right;
+}
+.post_navi a {
+  display: inline-block;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .archives {
@@ -591,6 +596,11 @@ hr {
 .archives-info .archives-info-meta a {
   color: #2c3f51;
   text-decoration: none;
+  overflow: hidden;
+  max-width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .archives-info time {
   margin-right: 4px;
@@ -609,6 +619,19 @@ hr {
   border-color: #ddd;
   border-radius: 4px 4px 0 0;
   box-shadow: none;
+}
+
+.disqus_btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.disqus_btn span {
+  cursor: pointer;
+}
+
+.toc {
+  font-size: 12px;
 }
 
 .panel {

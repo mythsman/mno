@@ -68,6 +68,11 @@
     a {
       color: #2c3f51;
       text-decoration: none;
+      overflow:hidden;
+      max-width:100%;
+      display:inline-block;
+      white-space:nowrap;
+      text-overflow:ellipsis;
     }
   }
   time {

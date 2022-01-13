@@ -9,14 +9,13 @@
       {{content}}
     </section>
   </article>
-  <div style="margin-top: 30px;margin-bottom: 30px;text-align: center;">
-    <span id="disqus_btn" class="btn hidden" style="cursor:pointer" >Disqus</span>
+  <div class="disqus_btn"">
+    <span class="disqus btn hidden" >Disqus</span>
   </div>
-  <div id="disqus_thread"></div>
 
   {{#if @custom.disqus_link}}
     <script defer type="text/javascript" src="{{asset 'js/disqus.js'}}" onload="disqus_init({
-        btn: '#disqus_btn',
+        btn: '.disqus',
         link: '{{ @custom.disqus_link}}'
       })">
     </script>

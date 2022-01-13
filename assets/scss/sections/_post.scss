@@ -65,3 +65,31 @@
   }
 
 }
+
+// ------------------------------
+// SINGLE POST NAVI
+// ------------------------------
+.post_navi{
+  margin-top:5px;
+  margin-bottom:5px;
+  width:100%;
+  display:inline-block;
+
+  .prev_post{
+    font-size:12px;
+    float:left;
+  }
+
+  .next_post {
+    font-size:12px;
+    float:right;
+  }
+
+  a {
+    display:inline-block;
+    max-width:300px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+  }
+}
