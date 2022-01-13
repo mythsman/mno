@@ -518,6 +518,99 @@ hr {
   border-top: 1px solid #DDDDDD;
 }
 
+.archives {
+  width: 90%;
+  margin: 40px auto;
+}
+.archives .archives-total {
+  position: relative;
+  top: 4px;
+  left: 20px;
+}
+.archives .archives-item {
+  position: relative;
+  margin: 30px 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.archives .archives-year {
+  font-weight: bold;
+  margin: 10px 20px;
+}
+.archives .archives-year::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin-left: -1px;
+  margin-top: 8px;
+  background: #555;
+  opacity: 0.5;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.archives-info {
+  list-style: none;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: border;
+}
+.archives-info .archives-info-meta {
+  margin-left: 20px;
+  padding: 4px 0;
+  overflow: hidden;
+  border-bottom: 1px dashed #ccc;
+}
+.archives-info .archives-info-meta::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #bbb;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: background;
+}
+.archives-info .archives-info-meta:hover {
+  border-bottom: 1px dashed #2c3f51;
+}
+.archives-info .archives-info-meta:hover::before {
+  background: #2c3f51;
+}
+.archives-info .archives-info-meta a {
+  color: #2c3f51;
+  text-decoration: none;
+}
+.archives-info time {
+  margin-right: 4px;
+  color: #999;
+  display: inline-block;
+}
+
+.tagCloud {
+  width: 90%;
+  height: 480px;
+  margin: 40px auto;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+  border-width: 1px;
+  border-color: #ddd;
+  border-radius: 4px 4px 0 0;
+  box-shadow: none;
+}
+
 .panel {
   display: table;
   width: 100%;
