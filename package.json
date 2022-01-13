@@ -13,10 +13,6 @@
     "config": {
         "posts_per_page": 10,
         "custom": {
-	    "paragraph_indent":{
-		"type":"boolean",
-		"default":false
-	    },
             "disqus_link": {
                 "type": "text"
             },
