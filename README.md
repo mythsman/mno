@@ -18,6 +18,11 @@ Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上�
 
 使用了 [highlight.js](http://highlightjs.org) 插件，并以[tomorrow-night](https://highlightjs.org/static/demo/)作为主题的代码高亮引擎。您可以在您的技术博客上以简洁优美的形式呈现您的代码。同时按需集成了[MathJax](https://www.mathjax.org/)，帮助您方便地呈现数学公式。
 
+内置支持的类型：
+```
+Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefile Markdown Objective-C PHP PHP Template Perl Plain text Python Python REPL R Ruby Rust SCSS SQL Shell Session Swift TOML, also INI TypeScript Visual Basic .NET YAML CMake Dockerfile Gradle Groovy Matlab 
+```
+
 #### Ghost自定义配置
 
 所有配置都可以直接通过 Ghost 的[后台自定义配置](https://ghost.org/docs/themes/custom-settings/)完成，几乎不用直接修改代码。
