@@ -5,7 +5,7 @@
       <span class="archives-total">
         {{#get "posts" as |posts postPages|}}
         <strong>
-         当前有 {{ postPages.total }} 篇文章。质量重于数量，不要贪多哦~
+	 {{t 'Now we have {total} posts.' total=postPages.total}}
         </strong>
         {{/get}}
       </span>
