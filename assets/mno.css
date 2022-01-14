@@ -516,6 +516,7 @@ hr {
   float: right;
 }
 .post_navi a {
+  vertical-align: middle;
   display: inline-block;
   max-width: 300px;
   overflow: hidden;
