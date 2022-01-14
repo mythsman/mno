@@ -45,6 +45,21 @@
     margin-left: 0;
   }
 
+  .post_navi {
+    .prev_post {
+      margin: 5px 0;
+      float: none;
+    }
+    
+    .next_post {
+      float: none;
+    }
+
+    a {
+      max-width:500px;
+    }
+  }
+
 }
 
 // ------------------------------

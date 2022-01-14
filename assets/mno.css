@@ -518,7 +518,7 @@ hr {
 .post_navi a {
   vertical-align: middle;
   display: inline-block;
-  max-width: 300px;
+  max-width: 280px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -1061,6 +1061,16 @@ input[type=tel]:focus {
   .navigation--social {
     margin-top: 5px;
     margin-left: 0;
+  }
+
+  .post_navi .prev_post {
+    float: none;
+  }
+  .post_navi .next_post {
+    float: none;
+  }
+  .post_navi a {
+    max-width: 500px;
   }
 }
 @media all and (max-width: 960px) {
