@@ -5,6 +5,20 @@
     position: relative;
     top: 4px;
   }
+  .archives-content {
+    position: relative;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 85px;
+      margin-left: 3px;
+      width: 4px;
+      height: calc(100% - 110px);
+      background: #f5f5f5;
+      z-index: -1;
+    }
+  }
   .archives-item {
     position: relative;
     margin: 30px 0;
