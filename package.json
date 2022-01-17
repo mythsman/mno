@@ -5,7 +5,7 @@
         "ghost-theme"
     ],
     "engines": {
-        "ghost-api": "v2"
+        "ghost-api": "v4"
     },
     "author": {
         "email": "mythsman@foxmail.com"
