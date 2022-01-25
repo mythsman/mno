@@ -2,11 +2,12 @@
 
 ## 总览
 
-`Mno` 是一个从 [Dale Anthony 的 Uno](https://github.com/daleanthony/uno) 、[Onevcat 的 Vno](https://github.com/onevcat/vno) 派生出的双栏 Ghost 主题，同时借鉴了[Litten 的 Yillia](https://github.com/litten/hexo-theme-yilia) hexo 主题的样式，希望能做到简洁、易配、高效。
+`Mno` 是一个从 [Dale Anthony 的 Uno](https://github.com/daleanthony/uno) 、[Onevcat 的 Vno](https://github.com/onevcat/vno) 派生出的响应式双栏 Ghost 主题，同时借鉴了[Litten 的 Yillia](https://github.com/litten/hexo-theme-yilia) hexo 主题的样式，希望能做到简洁、易配、高效。
 
 ## Demo
 
 可以参考我自己的[博客](https://blog.mythsman.com)，和我帮女朋友搭[博客](https://mikito.mythsman.com)。
+
 
 ## 特性
 
@@ -14,14 +15,14 @@
 
 Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上都表现良好。很多事件是由动画驱动的，这要感谢 [Animate.css](https://animate.style/) 的帮助。
 
+
 #### 代码高亮&MathJax
 
 使用了 [highlight.js](http://highlightjs.org) 插件，并以[tomorrow-night](https://highlightjs.org/static/demo/)作为主题的代码高亮引擎。您可以在您的技术博客上以简洁优美的形式呈现您的代码。同时按需集成了[MathJax](https://www.mathjax.org/)，帮助您方便地呈现数学公式。
 
 内置支持的类型：
-```
+
 Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefile Markdown Objective-C PHP PHP Template Perl Plain text Python Python REPL R Ruby Rust SCSS SQL Shell Session Swift TOML, also INI TypeScript Visual Basic .NET YAML CMake Dockerfile Gradle Groovy Matlab 
-```
 
 #### Ghost自定义配置
 
@@ -33,7 +34,7 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 
 #### 无限下拉的首页
 
-这里借鉴了Ghost官方的 [Casper](https://github.com/TryGhost/Casper/blob/main/assets/js/infinite-scroll.js) 主题，集成了首屏无限下拉的功能，免去了总是要点“下一页”的烦恼。
+这里借鉴了Ghost官方的 [Casper](https://github.com/TryGhost/Casper/blob/main/assets/js/infinite-scroll.js) 主题，集成了首屏无限下拉的功能，免去了总是要点“下一页”的麻烦。
 
 #### 集成了归档页和标签云
 

@@ -31,35 +31,35 @@
   var social_list = document.getElementById("social_navigation")
 
   {{#if @custom.github}}
-    social_list.appendChild(build_line("github","{{@custom.github}}"))
+    social_list.appendChild(build_line("github","{{{@custom.github}}}"))
   {{/if}}
 
   {{#if @custom.douban}}
-    social_list.appendChild(build_line("douban","{{@custom.douban}}"))
+    social_list.appendChild(build_line("douban","{{{@custom.douban}}}"))
   {{/if}}
 
   {{#if @custom.qq}}
-    social_list.appendChild(build_line("qq","{{@custom.qq}}"))
+    social_list.appendChild(build_line("qq","{{{@custom.qq}}}"))
   {{/if}}
 
   {{#if @custom.bilibili}}
-    social_list.appendChild(build_line("bilibili","{{@custom.bilibili}}"))
+    social_list.appendChild(build_line("bilibili","{{{@custom.bilibili}}}"))
   {{/if}}
 
   {{#if @custom.netease}}
-    social_list.appendChild(build_line("netease","{{@custom.netease}}"))
+    social_list.appendChild(build_line("netease","{{{@custom.netease}}}"))
   {{/if}}
 
   {{#if @custom.steam}}
-    social_list.appendChild(build_line("steam","{{@custom.steam}}"))
+    social_list.appendChild(build_line("steam","{{{@custom.steam}}}"))
   {{/if}}
 
   {{#if @custom.rss}}
-    social_list.appendChild(build_line("rss","{{@custom.rss}}"))
+    social_list.appendChild(build_line("rss","{{{@custom.rss}}}"))
   {{/if}}
 
   {{#if @custom.mail}}
-    social_list.appendChild(build_line("mail","{{@custom.mail}}"))
+    social_list.appendChild(build_line("mail","{{{@custom.mail}}}"))
   {{/if}}
 
 })()

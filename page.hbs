@@ -17,7 +17,7 @@
   {{#if @custom.disqus_link}}
     <script defer type="text/javascript" src="{{asset 'js/disqus.js'}}" onload="disqus_init({
         btn: '.disqus',
-        link: '{{ @custom.disqus_link}}'
+        link: '{{{ @custom.disqus_link }}}'
       })">
     </script>
   {{/if}}
