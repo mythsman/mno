@@ -15,7 +15,7 @@
   <div id="disqus_thread"></div>
 
   {{#if @custom.disqus_link}}
-    <script defer type="text/javascript" src="{{asset 'js/disqus.js'}}" onload="disqus_init({
+    <script defer src="{{asset 'js/disqus.js'}}" onload="disqus_init({
         btn: '.disqus',
         link: '{{{ @custom.disqus_link }}}'
       })">
@@ -23,4 +23,4 @@
   {{/if}}
 {{/post}}
 
-<script defer type="text/javascript" src="{{asset 'js/third_party/highlight-11.4.0.min.js'}}" onload="hljs.highlightAll()"></script>
+<script defer src="{{asset 'js/third_party/highlight-11.4.0.min.js'}}" onload="hljs.highlightAll()"></script>
