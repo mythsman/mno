@@ -26,7 +26,7 @@ function disqus_init(config) {
     }
 
     function show_disqus() {
-        var d = document,
+        let d = document,
         s = d.createElement('script');
         s.defer = "defer";
 	s.src = link;

@@ -2,7 +2,7 @@ window.ready(function(){
   let yearArray = [];
   let archive_items = document.querySelectorAll('.archives-item');
   forEach(archive_items, (idx,ele)=>{
-    var archivesYear = ele.getAttribute("date");
+    let archivesYear = ele.getAttribute("date");
     yearArray.push(archivesYear);
   });
 

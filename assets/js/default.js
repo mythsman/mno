@@ -33,7 +33,7 @@ window.fetchRequest = (url, params={}, timeout=10000) => {
 
 // Util for iterate list
 window.forEach = (array, callback, scope) => {
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     callback.call(scope, i, array[i]);
   }
 };

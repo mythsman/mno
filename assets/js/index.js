@@ -1,25 +1,25 @@
 (function (window, document) {
 
     // next link element
-    var nextElement = document.querySelector('link[rel=next]');
+    let nextElement = document.querySelector('link[rel=next]');
     if (!nextElement) {
         return;
     }
 
     // post feed element
-    var feedElement = document.querySelector('.post-list');
+    let feedElement = document.querySelector('.post-list');
     if (!feedElement) {
         return;
     }
 
-    var buffer = 300;
+    let buffer = 300;
 
-    var ticking = false;
-    var loading = false;
+    let ticking = false;
+    let loading = false;
 
-    var lastScrollY = window.scrollY;
-    var lastWindowHeight = window.innerHeight;
-    var lastDocumentHeight = document.documentElement.scrollHeight;
+    let lastScrollY = window.scrollY;
+    let lastWindowHeight = window.innerHeight;
+    let lastDocumentHeight = document.documentElement.scrollHeight;
 
     function onPageLoad() {
         if (this.status === 404) {
@@ -29,7 +29,7 @@
         }
 
         // append contents
-        var postElements = this.response.querySelectorAll('.infinite-post-feed');
+        let postElements = this.response.querySelectorAll('.infinite-post-feed');
         postElements.forEach(function (item) {
             // document.importNode is important, without it the item's owner
             // document will be different which can break resizing of
@@ -38,7 +38,7 @@
         });
 
         // set next link
-        var resNextElement = this.response.querySelector('link[rel=next]');
+        let resNextElement = this.response.querySelector('link[rel=next]');
         if (resNextElement) {
             nextElement.href = resNextElement.href;
         } else {
@@ -66,7 +66,7 @@
 
         loading = true;
 
-        var xhr = new window.XMLHttpRequest();
+        let xhr = new window.XMLHttpRequest();
         xhr.responseType = 'document';
 
         xhr.addEventListener('load', onPageLoad);
