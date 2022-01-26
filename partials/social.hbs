@@ -54,6 +54,30 @@
     social_list.appendChild(build_line("steam","{{{@custom.steam}}}"))
   {{/if}}
 
+  {{#if @custom.google}}
+    social_list.appendChild(build_line("google","{{{@custom.google}}}"))
+  {{/if}}
+
+  {{#if @custom.facebook}}
+    social_list.appendChild(build_line("facebook","{{{@custom.facebook}}}"))
+  {{/if}}
+
+  {{#if @custom.reddit}}
+    social_list.appendChild(build_line("reddit","{{{@custom.reddit}}}"))
+  {{/if}}
+
+  {{#if @custom.telegram}}
+    social_list.appendChild(build_line("telegram","{{{@custom.telegram}}}"))
+  {{/if}}
+
+  {{#if @custom.twitter}}
+    social_list.appendChild(build_line("twitter","{{{@custom.twitter}}}"))
+  {{/if}}
+
+  {{#if @custom.ethereum}}
+    social_list.appendChild(build_line("ethereum","{{{@custom.ethereum}}}"))
+  {{/if}}
+
   {{#if @custom.rss}}
     social_list.appendChild(build_line("rss","{{{@custom.rss}}}"))
   {{/if}}

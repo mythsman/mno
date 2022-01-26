@@ -41,6 +41,24 @@
             "steam": {
                 "type": "text"
             },
+            "google": {
+                "type": "text"
+            },
+            "facebook": {
+                "type": "text"
+            },
+            "reddit": {
+                "type": "text"
+            },
+            "telegram": {
+                "type": "text"
+            },
+            "twitter": {
+                "type": "text"
+            },
+            "ethereum": {
+                "type": "text"
+            },
             "rss": {
                 "type": "text"
             },
