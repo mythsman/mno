@@ -6,9 +6,13 @@
 
 ## Demo
 
-可以参考我自己的[博客](https://blog.mythsman.com)，和我帮女朋友搭[博客](https://mikito.mythsman.com)。
+可以参考我自己的[博客](https://blog.mythsman.com)
+
 ![mythsman-cover](./images/mythsman_cover.png)
 ![mythsman-index](./images/mythsman_index.png)
+
+和我帮女朋友搭[博客](https://mikito.mythsman.com)
+
 ![mikito-cover](./images/mikito_cover.png)
 ![mikito-index](./images/mikito_index.png)
 
@@ -18,7 +22,11 @@
 
 Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上都表现良好。很多事件是由动画驱动的，这要感谢 [Animate.css](https://animate.style/) 的帮助。
 
+**桌面版**
+
 ![mythsman-desktop](./images/mythsman_desktop.gif)
+
+**移动版**
 ![mythsman-mobile](./images/mythsman_mobile.gif)
 
 
@@ -34,8 +42,6 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 
 所有配置都可以直接通过 Ghost 的[后台自定义配置](https://ghost.org/docs/themes/custom-settings/)完成，几乎不用直接修改代码。
 
-![mythsman-config](./images/mythsman_config.png)
-
 #### 简约封面&社交按钮
 
 博客主页采用一个精简的背景封面和多个可选的社交链接，目前支持集成Github、Douban、QQ、Bilibili、Netease、Steam、Rss、Email等图标。这得感谢[iconfont 矢量库](https://www.iconfont.cn/)。
@@ -48,7 +54,10 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 
 为了方便快速检索所有文章标题，支持了archives页面，同时利用[jqcloud](https://github.com/lucaong/jQCloud) 集成了基于词频的标签云。
 
+**归档页**
 ![mythsman-archives](./images/mythsman_archives.png)
+
+**标签页**
 ![mythsman-config](./images/mythsman_tags.png)
 
 #### 支持集成Disqus评论
@@ -94,6 +103,12 @@ taxonomies:
 主题内部集成了MathJax，您只需要在发布文章时，增加一个 "MathJax" 标签，即可让该文章支持 LaTeX 语法。
 
 ![mythsman-mathjax](./images/mythsman_mathjax.png)
+
+#### 归档和标签页配置
+
+1. 手动新增一个 page ，并将 Page Url 设置为 archives ，即可在 /archives 页面下看到归档页。
+2. 手动新增一个 page ，并将 Page Url 设置为 tags ，即可在 /tags 页面下看到归档页。
+
 
 ## 开发
 
