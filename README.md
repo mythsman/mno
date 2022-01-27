@@ -7,13 +7,19 @@
 ## Demo
 
 可以参考我自己的[博客](https://blog.mythsman.com)，和我帮女朋友搭[博客](https://mikito.mythsman.com)。
-
+![mythsman-cover](./images/mythsman_cover.png)
+![mythsman-index](./images/mythsman_index.png)
+![mikito-cover](./images/mikito_cover.png)
+![mikito-index](./images/mikito_index.png)
 
 ## 特性
 
 #### 响应式设计和动画
 
 Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上都表现良好。很多事件是由动画驱动的，这要感谢 [Animate.css](https://animate.style/) 的帮助。
+
+![mythsman-desktop](./images/mythsman_desktop.gif)
+![mythsman-mobile](./images/mythsman_mobile.gif)
 
 
 #### 代码高亮&MathJax
@@ -28,6 +34,8 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 
 所有配置都可以直接通过 Ghost 的[后台自定义配置](https://ghost.org/docs/themes/custom-settings/)完成，几乎不用直接修改代码。
 
+![mythsman-config](./images/mythsman_config.png)
+
 #### 简约封面&社交按钮
 
 博客主页采用一个精简的背景封面和多个可选的社交链接，目前支持集成Github、Douban、QQ、Bilibili、Netease、Steam、Rss、Email等图标。这得感谢[iconfont 矢量库](https://www.iconfont.cn/)。
@@ -40,9 +48,12 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 
 为了方便快速检索所有文章标题，支持了archives页面，同时利用[jqcloud](https://github.com/lucaong/jQCloud) 集成了基于词频的标签云。
 
+![mythsman-archives](./images/mythsman_archives.png)
+![mythsman-config](./images/mythsman_tags.png)
+
 #### 支持集成Disqus评论
 
-思考再三还是集成了Disqus评论，不过由于大陆内地被GFW封的比较厉害，因此增加了一个GFW检测功能，只有当前用户能访问外网时、才会在 post 底部弹出Disqus评论框。
+思考再三还是集成了Disqus评论，不过由于大陆内地被GFW封的比较厉害，因此增加了一个GFW检测功能，只有当前用户能访问外网时、才会在 post 底部弹出Disqus评论框。在配置栏里配置上disqus提供的js即可使用。
 
 ## 配置
 
@@ -52,20 +63,37 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 
 一旦您准备就绪，只需要将这个 repo clone 到您博客的主题文件夹下：`content/themes/`，然后重启 ghost，您应该就能在博客的设定面板中看到 `Mno` 了。
 
-#### Ghost后台配置
-TODO
+#### 博客基础配置
+![mythsman-config](./images/mythsman_config.png)
 
 #### 导航栏配置
 
-也在 `partials/side-panel.hbs` 文件中定义。不要忘了把它们换成您自己的链接。您不应该更改或者至少保留 `/#blog` 链接，因为这个链接将触发一个转场到您的博客主页面的动画。
+也在 `partials/side-panel.hbs` 文件中定义。不要忘了把它们换成您自己的链接。
 
 #### 动态路由配置
-TODO
+由于本主题的首页设计为了一个封面，因此需要额外配置一下路由配置 route.yml ，参考配置如下：
+
+```
+routes:
+  /:
+    template: home
+
+collections:
+  /posts/:
+    permalink: /post/{id}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
+
+```
+其中的 template: home 和 template: index 指向了当前主题的模板文件，尽量不要改动。
 
 #### MathJax配置
-TODO
 主题内部集成了MathJax，您只需要在发布文章时，增加一个 "MathJax" 标签，即可让该文章支持 LaTeX 语法。
 
+![mythsman-mathjax](./images/mythsman_mathjax.png)
 
 ## 开发
 
