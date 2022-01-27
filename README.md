@@ -27,6 +27,7 @@ Mno 遵循响应式设计，所以应该能在各种设备（PC、Mobile）上�
 ![mythsman-desktop](./images/mythsman_desktop.gif)
 
 **移动版**
+
 ![mythsman-mobile](./images/mythsman_mobile.gif)
 
 
@@ -74,10 +75,6 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 
 #### 博客基础配置
 ![mythsman-config](./images/mythsman_config.png)
-
-#### 导航栏配置
-
-也在 `partials/side-panel.hbs` 文件中定义。不要忘了把它们换成您自己的链接。
 
 #### 动态路由配置
 由于本主题的首页设计为了一个封面，因此需要额外配置一下路由配置 route.yml ，参考配置如下：
@@ -138,7 +135,7 @@ sass --watch assets/scss/mno.scss:assets/mno.css
 
 #### 祝你好运
 
-玩得开心，也请记得给我反馈。如果您发现了什么 bug (我刚入门 web 开发，这简直是必然的)，请直接指出，如果还能附带一个 pull request 修正的话，那真的感激万分！
+玩得开心，也请记得给我反馈。如果您发现了什么 bug , 请直接指出，如果还能附带一个 pull request 修正的话，那真的感激万分！
 
 如果您觉得这个主题还不错的话，欢迎加颗星星或者 follow 我一下以示支持，这将对我和我的项目的发展提供不可估量的帮助。再次感谢。
 
