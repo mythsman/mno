@@ -61,9 +61,9 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 **标签页**
 ![mythsman-config](./images/mythsman_tags.png)
 
-#### 支持集成Disqus评论
+#### 支持集成Remark42评论
 
-思考再三还是集成了Disqus评论，不过由于大陆内地被GFW封的比较厉害，因此增加了一个GFW检测功能，只有当前用户能访问外网时、才会在 post 底部弹出Disqus评论框。在配置栏里配置上disqus提供的js即可使用。
+你可以在站点配置中配置remark\_config，以支持remark42评论。
 
 ## 配置
 

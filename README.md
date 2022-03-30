@@ -64,9 +64,9 @@ In order to facilitate and quickly retrieve all article titles, the archives pag
 **Tags page**
 ![mythsman-tags](./images/mythsman_tags.png)
 
-#### Support integrated Disqus comments
+#### Support integrated Remark42 comments
 
-After thinking about it again and again, I still integrate disqus comments. However, since the mainland China is blocked by GFW, a GFW detection function has been added. Only when the current user can access the external network, the disqus comment box will pop up at the bottom of the post. Configure the js provided by disqus in the configuration bar to use it.
+You can config your remark42\_config in theme config.
 
 ## Configure
 
