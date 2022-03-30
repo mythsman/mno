@@ -651,15 +651,6 @@ hr {
   box-shadow: none;
 }
 
-.disqus_btn {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.disqus_btn span {
-  cursor: pointer;
-}
-
 .toc {
   font-size: 12px;
 }
