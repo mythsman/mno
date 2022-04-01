@@ -2,8 +2,6 @@
 *.swp
 *.un~
 
-assets/*.map
-
 # ignore the sass-cache/
 .sass-cache/*
 **/.sass-cache/*
