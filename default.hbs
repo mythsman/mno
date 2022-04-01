@@ -15,11 +15,7 @@
     <meta property="og:title" content="{{@site.title}}"/>
     {{/is}}
 
-    {{#has any="meta_description"}}
-        <meta name="description" content="{{meta_description}}" />
-    {{else}}
-        <meta name="description" content="{{excerpt characters='140'}}"/>
-    {{/has}}
+    <meta name="description" content="{{excerpt characters='140'}}"/>
 
 
     <meta name="HandheldFriendly" content="True"/>
