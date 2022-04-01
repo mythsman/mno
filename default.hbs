@@ -14,7 +14,13 @@
     <meta name="twitter:title" content="{{@site.title}}"/>
     <meta property="og:title" content="{{@site.title}}"/>
     {{/is}}
-    <meta name="description" content="{{meta_description}}"/>
+
+    {{#has any="meta_description"}}
+        <meta name="description" content="{{meta_description}}" />
+    {{else}}
+        <meta name="description" content="{{excerpt characters='140'}}"/>
+    {{/has}}
+
 
     <meta name="HandheldFriendly" content="True"/>
     <meta name="MobileOptimized" content="320"/>
