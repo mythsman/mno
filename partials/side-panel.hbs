@@ -4,9 +4,21 @@
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
 
+      {{#if side_mode }}
         {{#if @site.logo}}
         <a href="{{@site.url}}"><img src="{{@site.logo}}" width="80" alt="{{@site.title}} logo" class="panel-cover__logo logo" /></a>
         {{/if}}
+      {{else}}
+        {{#if @site.logo}}
+        <a href="{{@site.url}}/posts"><img src="{{@site.logo}}" width="80" alt="{{@site.title}} logo" class="panel-cover__logo logo" /></a>
+        {{/if}}
+        <style scoped>
+          body {
+            overflow: hidden;
+          }
+        </style>
+      {{/if}}
+
         <h1 class="panel-cover__title panel-title"><a href="{{@site.url}}">{{@site.title}}</a></h1>
         <hr class="panel-cover__divider" />
         <p class="panel-cover__description">{{@site.description}}</p>
@@ -24,16 +36,7 @@
       </div>
 
     </div>
-
     <div class="panel-cover--overlay"></div>
   </div>
 </header>
 
-{{#if side_mode }}
-{{else}}
-<style scoped>
-body {
-  overflow: hidden;
-}
-{{/if}}
-</style>
