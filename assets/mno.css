@@ -68,7 +68,7 @@ html {
 body {
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1em;
-  color: #666666;
+  color: #333333;
   -webkit-font-smoothing: antialiased;
   overflow-y: overlay;
   overflow-x: hidden;
@@ -104,7 +104,7 @@ h5 {
   margin-bottom: 0.5em;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-weight: lighter;
-  color: #333333;
+  color: #000000;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -218,7 +218,7 @@ pre code {
 .time a,
 .author a,
 .tags a {
-  color: #666666;
+  color: #333333;
 }
 .date a:hover,
 .time a:hover,
@@ -230,14 +230,14 @@ pre code {
 .excerpt {
   margin: 0;
   font-size: 0.9em;
-  color: #999999;
+  color: #666666;
 }
 
 .intro {
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1.2em;
   font-weight: lighter;
-  color: #999999;
+  color: #666666;
 }
 
 .label {
@@ -274,7 +274,7 @@ pre code {
   padding: 2em 0 0 0;
   border-top: 2px solid #DDDDDD;
   font-size: 0.7em;
-  color: #b3b3b3;
+  color: gray;
 }
 
 .footer__copyright {
@@ -282,7 +282,7 @@ pre code {
   margin-bottom: 0.7em;
 }
 .footer__copyright a {
-  color: #a6a6a6;
+  color: #737373;
   text-decoration: underline;
 }
 .footer__copyright a:hover {
@@ -841,12 +841,12 @@ table tr:nth-child(even) {
 }
 
 .btn-tertiary {
-  border-color: #999999;
-  color: #999999;
+  border-color: #666666;
+  color: #666666;
 }
 .btn-tertiary:hover {
-  color: #737373;
-  border-color: #737373;
+  color: #404040;
+  border-color: #404040;
 }
 
 .btn-large {
@@ -868,7 +868,7 @@ table tr:nth-child(even) {
   left: 0;
   width: 100%;
   height: 35px;
-  background: rgba(51, 51, 51, 0.98);
+  background: rgba(0, 0, 0, 0.98);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 }
@@ -931,7 +931,7 @@ nav {
 .pagination__page-number {
   margin: 0;
   font-size: 0.8em;
-  color: #999999;
+  color: #666666;
 }
 
 .pagination__newer {
@@ -980,7 +980,7 @@ i {
   line-height: 1.3em;
 }
 .post-list__post-title a {
-  color: #333333;
+  color: #000000;
 }
 .post-list__post-title a:hover {
   color: #174065;
@@ -1031,7 +1031,7 @@ input[type=tel] {
   border: 1px solid #DDDDDD;
   border-radius: 3px;
   font-size: 0.9em;
-  color: #666666;
+  color: #333333;
 }
 input[type=text]:focus,
 input[type=password]:focus,
@@ -1163,7 +1163,7 @@ input[type=tel]:focus {
     left: 0;
     width: 100%;
     padding: 20px 0;
-    background: rgba(51, 51, 51, 0.98);
+    background: rgba(0, 0, 0, 0.98);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   .navigation-wrapper.visible {
