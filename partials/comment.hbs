@@ -1,0 +1,29 @@
+{{#if @custom.remark64_config}}
+  <div>
+    <blockquote style="margin-top:60px;font-size:12px">您可以登录后在下方评论留言哦☺️。>如果您想收到本文的回复提醒，可以点击评论框右下角的<b>电子邮件</b>进行验证✅。</blockquote>
+    <div id="remark42"></div>
+  </div>
+
+<script async>
+  var remark_config = {{{@custom.remark64_config}}}
+  !function(e, document) {
+  var i = 0;
+  for (; i < e.length; i++) {
+    var el = document.createElement("script");
+    var newHTML = ".js";
+    var d = document.head || document.body;
+    if ("noModule" in el) {
+      el.type = "module";
+      newHTML = ".mjs";
+    } else {
+      el.async = true;
+    }
+    el.defer = true;
+    el.src = remark_config.host + "/web/" + e[i] + newHTML;
+    d.appendChild(el);
+  }
+}(remark_config.components || ["embed"], document);
+
+</script>
+
+{{/if}}
