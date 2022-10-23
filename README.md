@@ -64,9 +64,9 @@ In order to facilitate and quickly retrieve all article titles, the archives pag
 **Tags page**
 ![mythsman-tags](./images/mythsman_tags.png)
 
-#### Support integrated Remark42 comments
+#### Support integrated native comments
 
-You can config your remark42\_config in theme config.
+You can enable comments in theme config.
 
 ## Configure
 

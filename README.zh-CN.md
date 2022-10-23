@@ -61,9 +61,9 @@ Bash C C# C++ CSS Diff Go HTML, XML JSON Java JavaScript Kotlin Less Lua Makefil
 **标签页**
 ![mythsman-config](./images/mythsman_tags.png)
 
-#### 支持集成Remark42评论
+#### 支持集成评论
 
-你可以在站点配置中配置remark\_config，以支持remark42评论。
+你可以在站点配置中开启评论，以支持原生评论。
 
 ## 配置
 

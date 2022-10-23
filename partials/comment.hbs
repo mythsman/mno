@@ -1,29 +1,10 @@
-{{#if @custom.remark64_config}}
-  <div>
-    <blockquote style="margin-top:40px;font-size:12px">您可以登录后在下方评论留言哦☺️。如果您想收到本文的回复提醒，可以登录后点击评论框右下角的<b style="font-weight:bold;">电子邮件</b>进行验证✅。</blockquote>
-    <div id="remark42"></div>
+{{#if @custom.enable_comment }}
+  <div style="margin-top:40px">
+  {{#if @member }}
+  <div style="margin-bottom:40p">
+    <a style="color: white;padding: 8px 30px;font-weight:600;border: 1px solid rgba(0,0,0,0.21);border-radius: 6px;text-shadow: 0 1px 0 rgb(0 0 0 / 15%);background:black" href={{url}}#/portal/account >{{t 'Account'}}</a>
   </div>
-
-<script async>
-  var remark_config = {{{@custom.remark64_config}}}
-  !function(e, document) {
-  var i = 0;
-  for (; i < e.length; i++) {
-    var el = document.createElement("script");
-    var newHTML = ".js";
-    var d = document.head || document.body;
-    if ("noModule" in el) {
-      el.type = "module";
-      newHTML = ".mjs";
-    } else {
-      el.async = true;
-    }
-    el.defer = true;
-    el.src = remark_config.host + "/web/" + e[i] + newHTML;
-    d.appendChild(el);
-  }
-}(remark_config.components || ["embed"], document);
-
-</script>
-
+  {{/if}}
+  {{ comments title="Comments" count=true mode="light" }}
+  </div>
 {{/if}}
