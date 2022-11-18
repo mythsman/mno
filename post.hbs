@@ -5,8 +5,11 @@
   <article>
     <header>
       <div class="post-meta">
-        <time datetime="{{date format="YYYY MMM DD"}}" class="post-meta__date date">{{date format="YYYY MMM DD"}}</time> &#8226; <span class="post-meta__tags tags">{{tags}}</span>
-        <span class="post-meta__author author"><img src="{{primary_author.profile_image}}" alt="profile image for {{primary_author.name}}" class="avatar post-meta__avatar" /> by {{primary_author.name}}</span>
+        <time datetime="{{date format="YYYY MMM DD"}}" class="post-meta__date date">{{date format="YYYY MMM DD"}}</time>
+        &#8226; <span class="post-meta__tags tags">{{tags}}</span>
+        <span class="post-meta__author author"><img src="{{primary_author.profile_image}}"
+                                                    alt="profile image for {{primary_author.name}}"
+                                                    class="avatar post-meta__avatar"/> by {{primary_author.name}}</span>
       </div>
       <h1 class="post-title">{{{title}}}</h1>
     </header>
@@ -18,12 +21,12 @@
   </article>
 
   <div class="post_navi">
-  {{#prev_post}}
-    <div class="prev_post">{{t 'Prev Post'}}：<a href="{{url}}">{{title}}</a></div>
-  {{/prev_post}}
-  {{#next_post}}
-    <div class="next_post">{{t 'Next Post'}}：<a href="{{url}}">{{title}}</a></div>
-  {{/next_post}}
+    {{#prev_post}}
+      <div class="prev_post">{{t 'Prev Post'}}：<a href="{{url}}">{{title}}</a></div>
+    {{/prev_post}}
+    {{#next_post}}
+      <div class="next_post">{{t 'Next Post'}}：<a href="{{url}}">{{title}}</a></div>
+    {{/next_post}}
   </div>
 
   {{#has tag="MathJax"}}
@@ -35,12 +38,15 @@
             processEscapes: true
         }
       });
+
+
+
     </script>
   {{/has}}
 
-{{> comment }}
+  {{> comment }}
 
-<script defer src="{{asset 'js/third_party/tocbot-4.11.1.min.js'}}" onload="tocbot.init({
+  <script defer src="{{asset 'js/third_party/tocbot-4.11.1.min.js'}}" onload="tocbot.init({
     tocSelector: '.toc',
     contentSelector: '.toc-content',
     headingSelector: 'h1, h2, h3',

@@ -1,27 +1,27 @@
 {{!< default}}
 {{#post}}
 
-<article>
-  <div class="tagCloud" id="keywords"></div>
-</article>
+  <article>
+    <div class="tagCloud" id="keywords"></div>
+  </article>
 
-<script defer src="{{asset 'js/third_party/jquery-1.11.3.min.js'}}"></script>
-<script defer src="{{asset 'js/third_party/jqcloud-1.0.4.min.js'}}" ></script>
-<script defer >
-  window.ready(function(){
-   var words = [];
-   {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
-    {{#foreach tags}}
-      var thisTag = {};
-      thisTag.text = "{{name}}";
-      thisTag.weight = "{{count.posts}}"
-      thisTag.link = "/tag/{{slug}}"
-      if(thisTag.text!="MathJax"){
-        words.push(thisTag);
-      }
-    {{/foreach}}
-   {{/get}}
-    $('#keywords').jQCloud(words);
-  });
-</script>
+  <script defer src="{{asset 'js/third_party/jquery-1.11.3.min.js'}}"></script>
+  <script defer src="{{asset 'js/third_party/jqcloud-1.0.4.min.js'}}"></script>
+  <script defer>
+    window.ready(function () {
+      var words = [];
+      {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+        {{#foreach tags}}
+          var thisTag = {};
+          thisTag.text = "{{name}}";
+          thisTag.weight = "{{count.posts}}"
+          thisTag.link = "/tag/{{slug}}"
+          if (thisTag.text != "MathJax") {
+            words.push(thisTag);
+          }
+        {{/foreach}}
+      {{/get}}
+      $('#keywords').jQCloud(words);
+    });
+  </script>
 {{/post}}

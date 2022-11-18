@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-    {{! Meta }}
-    {{#is "page,post,home,index,tag,author,private" }}
+  {{! Meta }}
+  {{#is "page,post,home,index,tag,author,private" }}
     <title>{{meta_title}}</title>
     <meta name="twitter:title" content="{{meta_title}}"/>
     <meta property="og:title" content="{{meta_title}}"/>
-    {{else}}
+  {{else}}
     <title>{{@site.title}}</title/>
     <meta name="twitter:title" content="{{@site.title}}"/>
     <meta property="og:title" content="{{@site.title}}"/>
-    {{/is}}
+  {{/is}}
 
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="MobileOptimized" content="320"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="HandheldFriendly" content="True"/>
+  <meta name="MobileOptimized" content="320"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary"/>
 
-    <meta property="og:type" content="article"/>
+  <meta property="og:type" content="article"/>
 
-    {{! Styles and Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset 'mno.css'}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset 'iconfont/iconfont.css'}}" />
-    <script src="{{asset 'js/default.js'}}"></script>
-    
-    {{! Ghost Head }}
-    {{ghost_head}}
+  {{! Styles and Scripts }}
+  <link rel="stylesheet" type="text/css" href="{{asset 'mno.css'}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset 'iconfont/iconfont.css'}}"/>
+  <script src="{{asset 'js/default.js'}}"></script>
+
+  {{! Ghost Head }}
+  {{ghost_head}}
 
 </head>
 <body class="{{body_class}}">
 
-    <span class="mobile btn-mobile-menu">
+<span class="mobile btn-mobile-menu">
         <i class="iconfont icon-list btn-mobile-menu__icon"></i>
         <i class="iconfont icon-angle-up btn-mobile-close__icon hidden"></i>
     </span>
 
-    {{#is "home" }}
-      {{> side-panel side_mode=false }}
-    {{else}}
-      {{> side-panel side_mode=true }}
+{{#is "home" }}
+  {{> side-panel side_mode=false }}
+{{else}}
+  {{> side-panel side_mode=true }}
 
 
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            {{{body}}}
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      {{{body}}}
 
-            {{> footer}}
-        </div>
+      {{> footer}}
     </div>
-    {{/is}}
+  </div>
+{{/is}}
 
 
-    {{! Ghost Footer }}
-    {{ghost_foot}}
+{{! Ghost Footer }}
+{{ghost_foot}}
 
 
 </body>

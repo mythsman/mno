@@ -1,10 +1,12 @@
 {{#if @custom.enable_comment }}
   <div style="margin-top:40px">
-  {{#if @member }}
-  <div style="margin-bottom:20px">
-    <a style="color: white;padding: 8px 30px;font-weight:600;border: 1px solid rgba(0,0,0,0.21);border-radius: 6px;text-shadow: 0 1px 0 rgb(0 0 0 / 15%);background:black" href={{url}}#/portal/account >{{t 'Account'}}</a>
-  </div>
-  {{/if}}
-  {{ comments title="Comments" count=true mode="light" }}
+    {{#if @member }}
+      <div style="margin-bottom:20px">
+        <a
+          style="color: white;padding: 8px 30px;font-weight:600;border: 1px solid rgba(0,0,0,0.21);border-radius: 6px;text-shadow: 0 1px 0 rgb(0 0 0 / 15%);background:black"
+          href={{url}}#/portal/account>{{t 'Account'}}</a>
+      </div>
+    {{/if}}
+    {{ comments title="Comments" count=true mode="light" }}
   </div>
 {{/if}}

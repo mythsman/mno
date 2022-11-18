@@ -3,88 +3,88 @@
   </ul>
 </nav>
 <script>
-(function(){
-  function build_line(name,url){
+  (function () {
+    function build_line(name, url) {
 
-    let line = document.createElement("li")
-    line.className = "navigation__item"
+      let line = document.createElement("li")
+      line.className = "navigation__item"
 
-    let link = document.createElement("a")
-    link.href = url
-    link.title = name
-    link.target = "_blank"
+      let link = document.createElement("a")
+      link.href = url
+      link.title = name
+      link.target = "_blank"
 
-    let ico = document.createElement("i")
-    ico.className="social iconfont icon-"+name
-    link.appendChild(ico)
+      let ico = document.createElement("i")
+      ico.className = "social iconfont icon-" + name
+      link.appendChild(ico)
 
-    let spn = document.createElement("span")
-    spn.className = "label"
-    spn.innerHTML = name
-    link.appendChild(spn)
+      let spn = document.createElement("span")
+      spn.className = "label"
+      spn.innerHTML = name
+      link.appendChild(spn)
 
-    line.appendChild(link) 
+      line.appendChild(link)
 
-    return line;
-  }
+      return line;
+    }
 
-  var social_list = document.getElementById("social_navigation")
+    var social_list = document.getElementById("social_navigation")
 
-  {{#if @custom.github}}
-    social_list.appendChild(build_line("github","{{{@custom.github}}}"))
-  {{/if}}
+    {{#if @custom.github}}
+      social_list.appendChild(build_line("github", "{{{@custom.github}}}"))
+    {{/if}}
 
-  {{#if @custom.douban}}
-    social_list.appendChild(build_line("douban","{{{@custom.douban}}}"))
-  {{/if}}
+    {{#if @custom.douban}}
+      social_list.appendChild(build_line("douban", "{{{@custom.douban}}}"))
+    {{/if}}
 
-  {{#if @custom.qq}}
-    social_list.appendChild(build_line("qq","{{{@custom.qq}}}"))
-  {{/if}}
+    {{#if @custom.qq}}
+      social_list.appendChild(build_line("qq", "{{{@custom.qq}}}"))
+    {{/if}}
 
-  {{#if @custom.bilibili}}
-    social_list.appendChild(build_line("bilibili","{{{@custom.bilibili}}}"))
-  {{/if}}
+    {{#if @custom.bilibili}}
+      social_list.appendChild(build_line("bilibili", "{{{@custom.bilibili}}}"))
+    {{/if}}
 
-  {{#if @custom.netease}}
-    social_list.appendChild(build_line("netease","{{{@custom.netease}}}"))
-  {{/if}}
+    {{#if @custom.netease}}
+      social_list.appendChild(build_line("netease", "{{{@custom.netease}}}"))
+    {{/if}}
 
-  {{#if @custom.steam}}
-    social_list.appendChild(build_line("steam","{{{@custom.steam}}}"))
-  {{/if}}
+    {{#if @custom.steam}}
+      social_list.appendChild(build_line("steam", "{{{@custom.steam}}}"))
+    {{/if}}
 
-  {{#if @custom.google}}
-    social_list.appendChild(build_line("google","{{{@custom.google}}}"))
-  {{/if}}
+    {{#if @custom.google}}
+      social_list.appendChild(build_line("google", "{{{@custom.google}}}"))
+    {{/if}}
 
-  {{#if @custom.facebook}}
-    social_list.appendChild(build_line("facebook","{{{@custom.facebook}}}"))
-  {{/if}}
+    {{#if @custom.facebook}}
+      social_list.appendChild(build_line("facebook", "{{{@custom.facebook}}}"))
+    {{/if}}
 
-  {{#if @custom.reddit}}
-    social_list.appendChild(build_line("reddit","{{{@custom.reddit}}}"))
-  {{/if}}
+    {{#if @custom.reddit}}
+      social_list.appendChild(build_line("reddit", "{{{@custom.reddit}}}"))
+    {{/if}}
 
-  {{#if @custom.telegram}}
-    social_list.appendChild(build_line("telegram","{{{@custom.telegram}}}"))
-  {{/if}}
+    {{#if @custom.telegram}}
+      social_list.appendChild(build_line("telegram", "{{{@custom.telegram}}}"))
+    {{/if}}
 
-  {{#if @custom.twitter}}
-    social_list.appendChild(build_line("twitter","{{{@custom.twitter}}}"))
-  {{/if}}
+    {{#if @custom.twitter}}
+      social_list.appendChild(build_line("twitter", "{{{@custom.twitter}}}"))
+    {{/if}}
 
-  {{#if @custom.ethereum}}
-    social_list.appendChild(build_line("ethereum","{{{@custom.ethereum}}}"))
-  {{/if}}
+    {{#if @custom.ethereum}}
+      social_list.appendChild(build_line("ethereum", "{{{@custom.ethereum}}}"))
+    {{/if}}
 
-  {{#if @custom.rss}}
-    social_list.appendChild(build_line("rss","{{{@custom.rss}}}"))
-  {{/if}}
+    {{#if @custom.rss}}
+      social_list.appendChild(build_line("rss", "{{{@custom.rss}}}"))
+    {{/if}}
 
-  {{#if @custom.mail}}
-    social_list.appendChild(build_line("mail","{{{@custom.mail}}}"))
-  {{/if}}
+    {{#if @custom.mail}}
+      social_list.appendChild(build_line("mail", "{{{@custom.mail}}}"))
+    {{/if}}
 
-})()
+  })()
 </script>

@@ -1,20 +1,25 @@
 {{!< default}}
 
-  <div class="main-post-list">
+<div class="main-post-list">
 
-    <ol class="post-list">
-      {{#foreach posts}}
+  <ol class="post-list">
+    {{#foreach posts}}
       <li class="infinite-post-feed">
-        <h2 class="post-list__post-title post-title"><a href="{{url}}" title="link to {{{title}}}">{{{title}}}</a></h2>
+        <h2 class="post-list__post-title post-title"><a href="{{url}}"
+                                                        title="link to {{{title}}}">{{{title}}}</a></h2>
         <p class="excerpt">{{excerpt characters="250"}}&hellip;</p>
-        <div class="post-list__meta"><time datetime="{{date format="YYYY MMM DD"}}" class="post-list__meta--date date">{{date format="YYYY MMM DD"}}</time> &#8226; <span class="post-list__meta--tags tags">{{tags}}</span><a class="btn-border-small" href={{url}}>{{t 'Read More'}}</a></div>
-        <hr class="post-list__divider" />
+        <div class="post-list__meta">
+          <time datetime="{{date format="YYYY MMM DD"}}" class="post-list__meta--date date">{{date
+            format="YYYY MMM DD"}}</time> &#8226; <span
+          class="post-list__meta--tags tags">{{tags}}</span><a class="btn-border-small" href={{url}}>{{t
+          'Read More'}}</a></div>
+        <hr class="post-list__divider"/>
       </li>
-      {{/foreach}}
-    </ol>
+    {{/foreach}}
+  </ol>
 
-    {{pagination}}
+  {{pagination}}
 
-  </div>
+</div>
 
-  <script src="{{asset 'js/index.js'}}"></script>
+<script src="{{asset 'js/index.js'}}"></script>
