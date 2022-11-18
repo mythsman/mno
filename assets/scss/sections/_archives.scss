@@ -1,10 +1,12 @@
 .archives {
   width: 90%;
   margin: 40px auto;
+
   .archives-total {
     position: relative;
     top: 4px;
   }
+
   .archives-content {
     position: relative;
 
@@ -19,15 +21,18 @@
       z-index: -1;
     }
   }
+
   .archives-item {
     position: relative;
     margin: 30px 0;
     overflow: hidden;
     z-index: 2;
   }
+
   .archives-year {
     font-weight: bold;
     margin: 10px 20px;
+
     &::before {
       content: " ";
       position: absolute;
@@ -43,6 +48,7 @@
     }
   }
 }
+
 .archives-info {
   list-style: none;
   font-size: 14px;
@@ -52,11 +58,13 @@
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: border;
+
   .archives-info-meta {
     margin-left: 20px;
     padding: 4px 0;
     overflow: hidden;
     border-bottom: 1px dashed #ccc;
+
     &::before {
       content: " ";
       position: absolute;
@@ -72,22 +80,26 @@
       transition-delay: 0s;
       transition-property: background;
     }
+
     &:hover {
       border-bottom: 1px dashed #2c3f51;
+
       &::before {
         background: #2c3f51;
       }
     }
+
     a {
       color: #2c3f51;
       text-decoration: none;
-      overflow:hidden;
-      max-width:100%;
-      display:inline-block;
-      white-space:nowrap;
-      text-overflow:ellipsis;
+      overflow: hidden;
+      max-width: 100%;
+      display: inline-block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
+
   time {
     margin-right: 4px;
     color: #999;

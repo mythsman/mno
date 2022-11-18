@@ -11,43 +11,43 @@ nav {
   list-style-type: none;
 }
 
-  .navigation__item {
-    display: inline-block;
-    margin: 5px 1px 0 0;
-    line-height: 1em;
+.navigation__item {
+  display: inline-block;
+  margin: 5px 1px 0 0;
+  line-height: 1em;
 
-    a {
-      display: block;
-      position: relative;
-      @extend .btn;
-      border-color: #FFF;
+  a {
+    display: block;
+    position: relative;
+    @extend .btn;
+    border-color: #FFF;
+    color: #FFF;
+    opacity: .8;
+
+    &:hover {
       color: #FFF;
-      opacity: .8;
-
-      &:hover {
-        color: #FFF;
-        border-color: #FFF;
-        opacity: 1;
-      }
-
+      border-color: #FFF;
+      opacity: 1;
     }
+  }
+}
 
+.navigation--secondary .navigation__item {
+  a {
+    font-size: 0.5em;
+    padding: 5px 12px 5px 12px;
+  }
+}
+
+.navigation--social .navigation__item {
+  a {
+    border: 0;
+    padding: 6px 8px 6px 8px;
+
+    .icon {
+      display: block;
+      font-size: 1.7em;
+    }
   }
 
-  .navigation--social {
-    a {
-      border: 0px;
-      padding: 6px 8px 6px 9px;
-
-      .label {
-        display: none;
-      }
-
-      .icon {
-        display: block;
-        font-size: 1.7em;
-      }
-
-    }
-
-  }
+}

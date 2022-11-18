@@ -1,8 +1,17 @@
-<nav class="cover-navigation cover-navigation--primary">
-  <ul class="navigation">
-    {{#foreach navigation}}
-      <li class="navigation__item"><a href="{{url}}" title="{{label}}" class="blog-button">{{label}}</a></li>
-    {{/foreach}}
-  </ul>
-</nav>
-
+{{#if isSecondary}}
+  <nav class="cover-navigation navigation--secondary">
+    <ul class="navigation">
+      {{#foreach navigation}}
+        <li class="navigation__item"><a href="{{url}}" title="{{label}}">{{label}}</a></li>
+      {{/foreach}}
+    </ul>
+  </nav>
+{{else}}
+  <nav class="cover-navigation navigation--primary">
+    <ul class="navigation">
+      {{#foreach navigation}}
+        <li class="navigation__item"><a href="{{url}}" title="{{label}}">{{label}}</a></li>
+      {{/foreach}}
+    </ul>
+  </nav>
+{{/if}}

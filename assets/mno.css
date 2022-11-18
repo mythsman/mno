@@ -911,14 +911,16 @@ nav {
   opacity: 1;
 }
 
-.navigation--social a {
-  border: 0px;
-  padding: 6px 8px 6px 9px;
+.navigation--secondary .navigation__item a {
+  font-size: 0.5em;
+  padding: 5px 12px 5px 12px;
 }
-.navigation--social a .label {
-  display: none;
+
+.navigation--social .navigation__item a {
+  border: 0;
+  padding: 6px 8px 6px 8px;
 }
-.navigation--social a .icon {
+.navigation--social .navigation__item a .icon {
   display: block;
   font-size: 1.7em;
 }
@@ -1078,8 +1080,18 @@ input[type=tel]:focus {
     font-size: 0.9em;
   }
 
+  .navigation--primary {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  .navigation--secondary {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
   .navigation--social {
-    margin-top: 5px;
+    margin-top: 30px;
     margin-left: 0;
   }
 
@@ -1184,6 +1196,13 @@ input[type=tel]:focus {
   .cover-navigation .navigation li {
     width: 80%;
     margin-bottom: 0.4em;
+  }
+  .cover-navigation.navigation--secondary {
+    padding-top: 5px;
+  }
+  .cover-navigation.navigation--secondary .navigation li {
+    display: inline-block;
+    width: 40%;
   }
   .cover-navigation.navigation--social {
     padding-top: 5px;

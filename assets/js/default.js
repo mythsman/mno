@@ -1,6 +1,6 @@
 // Mock jQuery.ready
 window.ready = (fn) => {
-  if (document.readyState != 'loading'){
+  if (document.readyState !== 'loading') {
     fn();
   } else {
     document.addEventListener('DOMContentLoaded', fn);
@@ -8,27 +8,27 @@ window.ready = (fn) => {
 }
 
 // fetch with timeout
-window.fetchRequest = (url, params={}, timeout=10000) => {
-    let isTimeout = false;
-    return new Promise(function(resolve, reject) {
-        const TO = setTimeout(function() {
-            isTimeout = true;
-            reject(new Error('Fetch timeout'));
-        }, timeout);
+window.fetchRequest = (url, params = {}, timeout = 10000) => {
+  let isTimeout = false;
+  return new Promise(function (resolve, reject) {
+    const TO = setTimeout(function () {
+      isTimeout = true;
+      reject(new Error('Fetch timeout'));
+    }, timeout);
 
-        fetch(url, params)
-            .then(res => {
-                clearTimeout(TO)
-                if(!isTimeout) {
-                    resolve(res)
-                }
-            }).catch(e => {
-                if( isTimeout ){
-                    return
-                }
-                reject(e)
-            })
+    fetch(url, params)
+      .then(res => {
+        clearTimeout(TO)
+        if (!isTimeout) {
+          resolve(res)
+        }
+      }).catch(e => {
+      if (isTimeout) {
+        return
+      }
+      reject(e)
     })
+  })
 }
 
 // Util for iterate list
@@ -44,8 +44,8 @@ window.animateCSS = (element, animation, prefix = 'animate__') =>
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
 
-    let node = element; 
-    if( typeof element !== 'object'){
+    let node = element;
+    if (typeof element !== 'object') {
       node = document.querySelector(element);
     }
 
@@ -61,7 +61,7 @@ window.animateCSS = (element, animation, prefix = 'animate__') =>
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
 
-window.ready(()=>{
+window.ready(() => {
 
   // Auto add _blank for outer link
   document.querySelectorAll('a').forEach(link => {
@@ -69,22 +69,22 @@ window.ready(()=>{
   });
 
   // Handle mobile navigation
-  document.querySelector('.btn-mobile-menu').addEventListener('click',()=>{
-    if(document.querySelector('.navigation-wrapper').classList.contains('visible')){
+  document.querySelector('.btn-mobile-menu').addEventListener('click', () => {
+    if (document.querySelector('.navigation-wrapper').classList.contains('visible')) {
       // hide navigation
-      animateCSS('.navigation-wrapper','bounceOutUp').then((msg)=>{
+      animateCSS('.navigation-wrapper', 'bounceOutUp').then((msg) => {
         document.querySelector('.navigation-wrapper').classList.toggle('visible');
       });
-      animateCSS('.btn-mobile-close__icon','fadeOut').then(msg=>{
+      animateCSS('.btn-mobile-close__icon', 'fadeOut').then(msg => {
         document.querySelector('.btn-mobile-close__icon').classList.toggle('hidden');
         document.querySelector('.btn-mobile-menu__icon').classList.toggle('hidden');
       });
-    }else{
+    } else {
       // show navigation
       document.querySelector('.navigation-wrapper').classList.toggle('visible');
-      animateCSS('.navigation-wrapper','bounceInDown');
+      animateCSS('.navigation-wrapper', 'bounceInDown');
 
-      animateCSS('.btn-mobile-menu__icon','fadeOut').then(msg=>{
+      animateCSS('.btn-mobile-menu__icon', 'fadeOut').then(msg => {
         document.querySelector('.btn-mobile-menu__icon').classList.toggle('hidden');
         document.querySelector('.btn-mobile-close__icon').classList.toggle('hidden');
       });
@@ -94,23 +94,34 @@ window.ready(()=>{
 
 
   // Logo shake
-  document.querySelector('.panel-cover__logo').addEventListener('mouseover',(event)=>{
-    animateCSS(event.target,'rubberBand');
+  document.querySelector('.panel-cover__logo').addEventListener('mouseover', (event) => {
+    animateCSS(event.target, 'rubberBand');
   })
 
-  // Click btn shake
-  let tab_btns = document.querySelectorAll('.cover-navigation--primary .navigation__item');
-  forEach(tab_btns , (idx,element)=>{
-    element.addEventListener('mouseover',(event)=>{
-      animateCSS(event.target,'pulse');
+  // Primary btn shake
+  let primary_btns = document.querySelectorAll('.navigation--primary .navigation__item');
+  forEach(primary_btns, (idx, element) => {
+    element.classList.add('animate__faster');
+    element.addEventListener('mouseover', (event) => {
+      animateCSS(event.target, 'pulse');
+    });
+  });
+
+  // Secondary btn shake
+  let secondary_btns = document.querySelectorAll('.navigation--secondary .navigation__item');
+  forEach(secondary_btns, (idx, element) => {
+    element.classList.add('animate__faster');
+    element.addEventListener('mouseover', (event) => {
+      animateCSS(event.target, 'pulse');
     });
   });
 
   // Social btn shake
   let social_btns = document.querySelectorAll('.navigation--social .navigation__item');
-  forEach(social_btns, (idx, element)=>{
-    element.addEventListener('mouseover',(event)=>{
-      animateCSS(event.target,'rubberBand');
+  forEach(social_btns, (idx, element) => {
+    element.classList.add('animate__faster');
+    element.addEventListener('mouseover', (event) => {
+      animateCSS(event.target, 'rubberBand');
     });
   });
 });

@@ -7,8 +7,8 @@ html, body {
 }
 
 html {
-    height: 100%;
-    max-height: 100%;
+  height: 100%;
+  max-height: 100%;
 }
 
 body {
@@ -38,10 +38,10 @@ a {
 
   &:hover {
     color: $hover-color;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
   }
 
 }
@@ -165,7 +165,7 @@ pre {
   font-size: .9em;
   font-weight: normal;
   line-height: 1.3em;
-  overflow:scroll;
+  overflow: scroll;
 
   code {
     padding: 0;
@@ -235,10 +235,10 @@ pre {
   overflow-x: hidden;
 }
 
-  .content-wrapper__inner {
-    margin: 0 10%;
-    padding: 50px 0;
-  }
+.content-wrapper__inner {
+  margin: 0 10%;
+  padding: 50px 0;
+}
 
 .footer {
   display: block;
@@ -248,21 +248,21 @@ pre {
   color: lighten($gray-dark, 10%);
 }
 
-  .footer__copyright {
-    display: block;
-    margin-bottom: .7em;
+.footer__copyright {
+  display: block;
+  margin-bottom: .7em;
 
-    a {
-      color: lighten($gray-dark, 5%);
-      text-decoration: underline;
+  a {
+    color: lighten($gray-dark, 5%);
+    text-decoration: underline;
 
-      &:hover {
-        color: $hover-color;
-      }
-
+    &:hover {
+      color: $hover-color;
     }
 
   }
+
+}
 
 // ------------------------------
 // AVATAR & LOGO
@@ -272,7 +272,7 @@ pre {
 .logo {
   border-radius: 50%;
   border: 3px solid #FFF;
-  box-shadow:0 0 1px 1px rgba(000,000,000,.3);
+  box-shadow: 0 0 1px 1px rgba(000, 000, 000, .3);
 }
 
 // ------------------------------
@@ -302,67 +302,68 @@ hr {
 // ------------------------------
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-button {
-	width: 0;
-	height: 0;
+  width: 0;
+  height: 0;
 }
 
-::-webkit-scrollbar-button:start:increment,::-webkit-scrollbar-button:end:decrement {
-	display: none;
+::-webkit-scrollbar-button:start:increment, ::-webkit-scrollbar-button:end:decrement {
+  display: none;
 }
 
 ::-webkit-scrollbar-corner {
-	display: block;
+  display: block;
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 8px;
-	background-color: rgba(0,0,0,.2);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	border-radius: 8px;
-	background-color: rgba(0,0,0,.5);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .5);
 }
 
-::-webkit-scrollbar-track,::-webkit-scrollbar-thumb {
-	border-right: 1px solid transparent;
-	border-left: 1px solid transparent;
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
 }
 
 ::-webkit-scrollbar-track:hover {
-	background-color: rgba(0,0,0,.15);
+  background-color: rgba(0, 0, 0, .15);
 }
+
 ::-webkit-scrollbar-button:start {
-	width: 10px;
-	height: 10px;
-	background: url(images/scrollbar_arrow.png) no-repeat 0 0;
+  width: 10px;
+  height: 10px;
+  background: url(images/scrollbar_arrow.png) no-repeat 0 0;
 }
 
 ::-webkit-scrollbar-button:start:hover {
-	background: url(images/scrollbar_arrow.png) no-repeat -15px 0;
+  background: url(images/scrollbar_arrow.png) no-repeat -15px 0;
 }
 
 ::-webkit-scrollbar-button:start:active {
-	background: url(images/scrollbar_arrow.png) no-repeat -30px 0;
+  background: url(images/scrollbar_arrow.png) no-repeat -30px 0;
 }
 
 ::-webkit-scrollbar-button:end {
-	width: 10px;
-	height: 10px;
-	background: url(images/scrollbar_arrow.png) no-repeat 0 -18px;
+  width: 10px;
+  height: 10px;
+  background: url(images/scrollbar_arrow.png) no-repeat 0 -18px;
 }
 
 ::-webkit-scrollbar-button:end:hover {
-	background: url(images/scrollbar_arrow.png) no-repeat -15px -18px;
+  background: url(images/scrollbar_arrow.png) no-repeat -15px -18px;
 }
 
 ::-webkit-scrollbar-button:end:active {
-	background: url(images/scrollbar_arrow.png) no-repeat -30px -18px;
+  background: url(images/scrollbar_arrow.png) no-repeat -30px -18px;
 }
 
 
@@ -371,90 +372,90 @@ hr {
 // ------------------------------
 
 .kg-bookmark-card {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 
   .kg-bookmark-container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row-reverse;
-      color: currentColor;
-      font-family: inherit;
-      text-decoration: none;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    color: currentColor;
+    font-family: inherit;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .kg-bookmark-container:hover {
-      text-decoration: none;
+    text-decoration: none;
   }
 
   .kg-bookmark-content {
-      width: 0px;
-      flex-basis: 0;
-      flex-grow: 999;
-      padding: 20px;
-      order: 1;
+    width: 0px;
+    flex-basis: 0;
+    flex-grow: 999;
+    padding: 20px;
+    order: 1;
   }
 
   .kg-bookmark-title {
-      font-weight: 600;
+    font-weight: 600;
   }
 
   .kg-bookmark-metadata,
   .kg-bookmark-description {
-      margin-top: .5em;
+    margin-top: .5em;
   }
 
   .kg-bookmark-metadata {
-      align-items: center;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .kg-bookmark-description {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 
   .kg-bookmark-icon {
-      box-shadow: none ;
-      display: inline-block ;
-      width: 1em;
-      height: 1em;
-      vertical-align: text-bottom;
-      margin-right: .5em;
-      margin-bottom: .05em;
+    box-shadow: none;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    margin-right: .5em;
+    margin-bottom: .05em;
   }
 
   .kg-bookmark-thumbnail {
-      max-width: 180px;
-      min-width: 140px;
-      display: flex;
-      flex-basis: 24rem;
-      flex-grow: 1;
+    max-width: 180px;
+    min-width: 140px;
+    display: flex;
+    flex-basis: 24rem;
+    flex-grow: 1;
   }
 
   .kg-bookmark-thumbnail img {
-      max-width: 100%;
-      margin:0;
-      box-shadow: none;
-      height: auto;
-      vertical-align: bottom;
-      object-fit: cover;
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover;
   }
 
   .kg-bookmark-author {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .kg-bookmark-publisher::before {
-      content: "•";
-      margin: 0 .5em;
+    content: "•";
+    margin: 0 .5em;
   }
 
   .kg-width-wide {
