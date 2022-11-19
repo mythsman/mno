@@ -1,0 +1,32 @@
+{{!< default}}
+{{#post}}
+  <article>
+    <h1>{{title}}</h1>
+    <div class="douban-tabs">
+      <a class="douban-tab" id="douban-book-collect">读过(0)</a>
+      <a class="douban-tab" id="douban-book-do">在读(0)</a>
+      <a class="douban-tab" id="douban-book-wish">想读(0)</a>
+
+      <a class="douban-tab" id="douban-movie-collect">看过(0)</a>
+      <a class="douban-tab" id="douban-movie-do">在看(0)</a>
+      <a class="douban-tab" id="douban-movie-wish">想看(0)</a>
+
+      <a class="douban-tab" id="douban-game-collect">玩过(0)</a>
+      <a class="douban-tab" id="douban-game-do">在玩(0)</a>
+      <a class="douban-tab" id="douban-game-wish">想玩(0)</a>
+
+    </div>
+    <div class="douban-list">
+
+    </div>
+    <div class="douban-pagination">
+      <a class="douban-button douban-firstpage">首页</a>
+      <a class="douban-button douban-previouspage">上一页</a>
+      <span class="douban-pagenum">1 / 1</span>
+      <a class="douban-button douban-nextpage">下一页</a>
+      <a class="douban-button douban-lastpage">尾页</a>
+    </div>
+  </article>
+
+  <script id="douban-script" src="{{asset 'js/page-douban.js'}}" data-douban-id="{{{@custom.douban_id}}}" data-douban-page-size="{{{@custom.douban_page_size}}}"></script>
+{{/post}}

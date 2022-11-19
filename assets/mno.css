@@ -265,7 +265,7 @@ pre code {
 }
 
 .content-wrapper__inner {
-  margin: 0 10%;
+  margin: 0 5%;
   padding: 50px 0;
 }
 
@@ -636,6 +636,73 @@ hr {
   margin-right: 4px;
   color: #999;
   display: inline-block;
+}
+
+.douban-tabs {
+  margin-bottom: 15px;
+  margin-top: 55px;
+}
+.douban-tabs .douban-tab {
+  padding: 5px;
+  text-decoration: none !important;
+}
+.douban-tabs .douban-tab:hover {
+  cursor: pointer;
+}
+.douban-tabs .douban-active {
+  background: #657b83;
+  color: #fff !important;
+}
+
+.douban-list .douban-item {
+  position: relative;
+  clear: both;
+  min-height: 160px;
+  padding: 10px 0;
+  border-bottom: 1px #ddd solid;
+}
+.douban-list .douban-picture {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100px;
+}
+.douban-list .douban-picture img {
+  max-width: 100%;
+}
+.douban-list .douban-info {
+  padding-left: 120px;
+}
+.douban-list .douban-pub {
+  font-size: 12px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.douban-list .douban-meta {
+  font-size: 12px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.douban-list .douban-comments {
+  font-size: 14px;
+}
+
+.douban-pagination {
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.douban-pagination .douban-button {
+  padding: 5px;
+  text-decoration: none !important;
+}
+.douban-pagination .douban-button:hover {
+  cursor: pointer;
+  background: #657b83;
+  color: #fff !important;
+  opacity: 1;
 }
 
 .tagCloud {

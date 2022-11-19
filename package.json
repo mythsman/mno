@@ -1,70 +1,78 @@
 {
-    "name": "mno",
-    "version": "2.0.1",
-    "keywords": [
-        "ghost-theme"
-    ],
-    "author": {
-        "email": "mythsman@foxmail.com"
-    },
-    "card_assets": true,
-    "config": {
-        "posts_per_page": 10,
-        "custom": {
-            "enable_comment": {
-		"type": "boolean",
-                "default": false
-            },
-            "icp_link": {
-                "type": "text",
-                "default": "https://beian.miit.gov.cn"
-            },
-            "icp_name": {
-                "type": "text"
-            },
-            "github": {
-                "type": "text"
-            },
-            "douban": {
-                "type": "text"
-            },
-            "qq": {
-                "type": "text"
-            },
-            "bilibili": {
-                "type": "text"
-            },
-            "netease": {
-                "type": "text"
-            },
-            "steam": {
-                "type": "text"
-            },
-            "google": {
-                "type": "text"
-            },
-            "facebook": {
-                "type": "text"
-            },
-            "reddit": {
-                "type": "text"
-            },
-            "telegram": {
-                "type": "text"
-            },
-            "twitter": {
-                "type": "text"
-            },
-            "ethereum": {
-                "type": "text"
-            },
-            "rss": {
-                "type": "text"
-            },
-            "mail": {
-                "type": "text"
-            }
-        }
-    },
-    "license": "MIT"
+  "name": "mno",
+  "version": "2.0.1",
+  "keywords": [
+    "ghost-theme"
+  ],
+  "author": {
+    "email": "mythsman@foxmail.com"
+  },
+  "card_assets": true,
+  "config": {
+    "posts_per_page": 10,
+    "custom": {
+      "enable_comment": {
+        "type": "boolean",
+        "default": false
+      },
+      "douban_id": {
+        "type": "text",
+        "default": "162448367"
+      },
+      "douban_page_size": {
+        "type": "text",
+        "default": "15"
+      },
+      "icp_link": {
+        "type": "text",
+        "default": "https://beian.miit.gov.cn"
+      },
+      "icp_name": {
+        "type": "text"
+      },
+      "github": {
+        "type": "text"
+      },
+      "douban": {
+        "type": "text"
+      },
+      "qq": {
+        "type": "text"
+      },
+      "bilibili": {
+        "type": "text"
+      },
+      "netease": {
+        "type": "text"
+      },
+      "steam": {
+        "type": "text"
+      },
+      "google": {
+        "type": "text"
+      },
+      "facebook": {
+        "type": "text"
+      },
+      "reddit": {
+        "type": "text"
+      },
+      "telegram": {
+        "type": "text"
+      },
+      "twitter": {
+        "type": "text"
+      },
+      "ethereum": {
+        "type": "text"
+      },
+      "rss": {
+        "type": "text"
+      },
+      "mail": {
+        "type": "text"
+      }
+    }
+  },
+  "license": "MIT"
 }
