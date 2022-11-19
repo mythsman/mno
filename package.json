@@ -5,7 +5,8 @@
     "ghost-theme"
   ],
   "author": {
-    "email": "mythsman@foxmail.com"
+    "email": "mythsman@foxmail.com",
+    "name": "mythsman"
   },
   "card_assets": true,
   "config": {
