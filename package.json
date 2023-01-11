@@ -12,6 +12,10 @@
   "config": {
     "posts_per_page": 10,
     "custom": {
+      "enable_toc":{
+        "type": "boolean",
+        "default": false
+      },
       "enable_comment": {
         "type": "boolean",
         "default": false

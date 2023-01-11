@@ -14,7 +14,9 @@
       <h1 class="post-title">{{{title}}}</h1>
     </header>
 
-    <div class="toc"></div>
+    {{#if @custom.enable_toc }}
+      <div class="toc"></div>
+    {{/if}}
     <section class="toc-content {{post_class}}">
       {{content}}
     </section>
@@ -46,12 +48,14 @@
 
   {{> comment }}
 
-  <script defer src="{{asset 'js/third_party/tocbot-4.11.1.min.js'}}" onload="tocbot.init({
-    tocSelector: '.toc',
-    contentSelector: '.toc-content',
-    headingSelector: 'h1, h2, h3',
-    hasInnerContainers: true,
+  {{#if @custom.enable_toc }}
+    <script defer src="{{asset 'js/third_party/tocbot-4.11.1.min.js'}}" onload="tocbot.init({
+      tocSelector: '.toc',
+      contentSelector: '.toc-content',
+      headingSelector: 'h1, h2, h3',
+      hasInnerContainers: true,
   });"></script>
+  {{/if}}
 {{/post}}
 
 <script defer src="{{asset "js/third_party/highlight-11.4.0.min.js"}}" onload="hljs.highlightAll()"></script>
