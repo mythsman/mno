@@ -1,0 +1,14 @@
+{{!< default}}
+{{#post}}
+  <h1>{{title}}</h1>
+  {{#if @custom.douban_id}}
+    <div id="douban"></div>
+
+    <script src="{{asset 'js/third_party/idouban.js'}}"  onload="window.idouban.init({
+           selector: '#douban',
+           type: 'book',
+           douban_id: {{ @custom.douban_id }},
+           page_size: parseInt({{ @custom.douban_page_size }}),
+        })"></script>
+  {{/if}}
+{{/post}}
