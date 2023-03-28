@@ -610,74 +610,6 @@ hr {
   display: inline-block;
 }
 
-.douban-tabs {
-  margin-bottom: 15px;
-  margin-top: 55px;
-  line-height: 2em;
-}
-.douban-tabs .douban-tab {
-  padding: 5px;
-  text-decoration: none !important;
-}
-.douban-tabs .douban-tab:hover {
-  cursor: pointer;
-}
-.douban-tabs .douban-active {
-  background: #657b83;
-  color: #fff !important;
-}
-
-.douban-list .douban-item {
-  position: relative;
-  clear: both;
-  min-height: 160px;
-  padding: 10px 0;
-  border-bottom: 1px #ddd solid;
-}
-.douban-list .douban-picture {
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 100px;
-}
-.douban-list .douban-picture img {
-  max-width: 100%;
-}
-.douban-list .douban-info {
-  padding-left: 120px;
-}
-.douban-list .douban-pub {
-  font-size: 12px;
-  padding-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.douban-list .douban-meta {
-  font-size: 12px;
-  padding-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.douban-list .douban-comments {
-  font-size: 14px;
-}
-
-.douban-pagination {
-  margin-top: 15px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.douban-pagination .douban-button {
-  padding: 5px;
-  text-decoration: none !important;
-}
-.douban-pagination .douban-button:hover {
-  cursor: pointer;
-  background: #657b83;
-  color: #fff !important;
-  opacity: 1;
-}
-
 .tagCloud {
   width: 90%;
   height: 480px;
@@ -5180,6 +5112,104 @@ code.hljs {
 
 .hljs-meta .hljs-keyword, .hljs-meta-keyword {
   font-weight: 700;
+}
+
+.idouban-tabs {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.idouban-tab {
+  padding: 5px;
+  text-decoration: none !important;
+}
+
+.idouban-tab-active {
+  background: #657b83;
+  color: #fff !important;
+}
+
+.idouban-item {
+  clear: both;
+  min-height: 150px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .idouban-item {
+    width: 100%;
+  }
+}
+.idouban-picture {
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.idouban-picture img {
+  max-width: 100%;
+}
+
+.idouban-info {
+  padding-left: 120px;
+}
+
+.idouban-meta {
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-top: 5px;
+  padding-right: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.idouban-rating {
+  margin-top: 8px;
+  padding-right: 10px;
+  font-size: 12px;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.idouban-comment {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.idouban-pagination {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.idouban-page-num {
+  min-width: 60px;
+  display: inline-block;
+}
+
+.idouban-button {
+  padding: 5px;
+  text-decoration: none !important;
+}
+
+.idouban-button:hover {
+  opacity: 1;
+  background: #657b83;
+  color: #fff !important;
+}
+
+.idouban-hide {
+  display: none;
+}
+
+.idouban-show {
+  display: block;
 }
 
 /*# sourceMappingURL=mno.css.map */
