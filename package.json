@@ -32,6 +32,9 @@
         "type": "text",
         "default": "https://beian.miit.gov.cn"
       },
+      "icp_name": {
+        "type": "text"
+      },
       "social_config": {
         "type": "text",
         "default": "[{\"name\":\"github\",\"link\":\"\"},{\"name\":\"douban\",\"link\":\"\"},{\"name\":\"qq\",\"link\":\"\"},{\"name\":\"bilibili\",\"link\":\"\"},{\"name\":\"netease\",\"link\":\"\"},{\"name\":\"steam\",\"link\":\"\"},{\"name\":\"google\",\"link\":\"\"},{\"name\":\"facebook\",\"link\":\"\"},{\"name\":\"reddit\",\"link\":\"\"},{\"name\":\"telegram\",\"link\":\"\"},{\"name\":\"twitter\",\"link\":\"\"},{\"name\":\"ethereum\",\"link\":\"\"},{\"name\":\"rss\",\"link\":\"\"},{\"name\":\"mail\",\"link\":\"\"}]"
