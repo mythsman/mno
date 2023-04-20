@@ -12,7 +12,7 @@
   "config": {
     "posts_per_page": 10,
     "custom": {
-      "enable_toc":{
+      "enable_toc": {
         "type": "boolean",
         "default": false
       },
@@ -32,50 +32,9 @@
         "type": "text",
         "default": "https://beian.miit.gov.cn"
       },
-      "icp_name": {
-        "type": "text"
-      },
-      "github": {
-        "type": "text"
-      },
-      "douban": {
-        "type": "text"
-      },
-      "qq": {
-        "type": "text"
-      },
-      "bilibili": {
-        "type": "text"
-      },
-      "netease": {
-        "type": "text"
-      },
-      "steam": {
-        "type": "text"
-      },
-      "google": {
-        "type": "text"
-      },
-      "facebook": {
-        "type": "text"
-      },
-      "reddit": {
-        "type": "text"
-      },
-      "telegram": {
-        "type": "text"
-      },
-      "twitter": {
-        "type": "text"
-      },
-      "ethereum": {
-        "type": "text"
-      },
-      "rss": {
-        "type": "text"
-      },
-      "mail": {
-        "type": "text"
+      "social_config": {
+        "type": "text",
+        "default": "[{\"name\":\"github\",\"link\":\"\"},{\"name\":\"douban\",\"link\":\"\"},{\"name\":\"qq\",\"link\":\"\"},{\"name\":\"bilibili\",\"link\":\"\"},{\"name\":\"netease\",\"link\":\"\"},{\"name\":\"steam\",\"link\":\"\"},{\"name\":\"google\",\"link\":\"\"},{\"name\":\"facebook\",\"link\":\"\"},{\"name\":\"reddit\",\"link\":\"\"},{\"name\":\"telegram\",\"link\":\"\"},{\"name\":\"twitter\",\"link\":\"\"},{\"name\":\"ethereum\",\"link\":\"\"},{\"name\":\"rss\",\"link\":\"\"},{\"name\":\"mail\",\"link\":\"\"}]"
       }
     }
   },

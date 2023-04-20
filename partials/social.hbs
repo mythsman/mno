@@ -23,62 +23,17 @@
       return line;
     }
 
-    var social_list = document.getElementById("social_navigation")
+    let social_list = document.getElementById("social_navigation")
 
-    {{#if @custom.github}}
-      social_list.appendChild(build_line("github", "{{{@custom.github}}}"))
-    {{/if}}
-
-    {{#if @custom.douban}}
-      social_list.appendChild(build_line("douban", "{{{@custom.douban}}}"))
-    {{/if}}
-
-    {{#if @custom.qq}}
-      social_list.appendChild(build_line("qq", "{{{@custom.qq}}}"))
-    {{/if}}
-
-    {{#if @custom.bilibili}}
-      social_list.appendChild(build_line("bilibili", "{{{@custom.bilibili}}}"))
-    {{/if}}
-
-    {{#if @custom.netease}}
-      social_list.appendChild(build_line("netease", "{{{@custom.netease}}}"))
-    {{/if}}
-
-    {{#if @custom.steam}}
-      social_list.appendChild(build_line("steam", "{{{@custom.steam}}}"))
-    {{/if}}
-
-    {{#if @custom.google}}
-      social_list.appendChild(build_line("google", "{{{@custom.google}}}"))
-    {{/if}}
-
-    {{#if @custom.facebook}}
-      social_list.appendChild(build_line("facebook", "{{{@custom.facebook}}}"))
-    {{/if}}
-
-    {{#if @custom.reddit}}
-      social_list.appendChild(build_line("reddit", "{{{@custom.reddit}}}"))
-    {{/if}}
-
-    {{#if @custom.telegram}}
-      social_list.appendChild(build_line("telegram", "{{{@custom.telegram}}}"))
-    {{/if}}
-
-    {{#if @custom.twitter}}
-      social_list.appendChild(build_line("twitter", "{{{@custom.twitter}}}"))
-    {{/if}}
-
-    {{#if @custom.ethereum}}
-      social_list.appendChild(build_line("ethereum", "{{{@custom.ethereum}}}"))
-    {{/if}}
-
-    {{#if @custom.rss}}
-      social_list.appendChild(build_line("rss", "{{{@custom.rss}}}"))
-    {{/if}}
-
-    {{#if @custom.mail}}
-      social_list.appendChild(build_line("mail", "{{{@custom.mail}}}"))
+    {{#if @custom.social_config}}
+      let list = {{{@custom.social_config}}}
+      if (list) {
+        list.forEach(item => {
+          if (item.name && item.link) {
+            social_list.appendChild(build_line(item.name, item.link))
+          }
+        })
+      }
     {{/if}}
 
   })()
